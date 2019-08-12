@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -30,4 +30,25 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App {
+  background-color: white;
+  text-align: center;
+}
+
+.main-header {
+  background-color: rgb(7, 80, 7);
+  color: whitesmoke;
+  padding: 15px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 36px;
+  margin-top: 0px;
+}
+
+.logo {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }

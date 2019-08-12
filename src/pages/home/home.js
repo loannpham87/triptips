@@ -15,7 +15,19 @@ function Home() {
           alt="background photo"
         />
 
-        <button className="btn">Login / Signup</button>
+        <button className="btn">
+          <a href="/login">Login / Signup</a>
+        </button>
+
+        <div className="dev-cred">
+          <footer>
+            For more info on the devs on this project, please check out our
+            GitHub portfolios:{" "}
+            <a href="https://github.com/AmandaLuane"> Amanda Johnson |</a>
+            <a href="https://github.com/loannpham87"> Loann Pham |</a>
+            <a href="https://github.com/rdweston1995"> Robert Weston</a>
+          </footer>
+        </div>
       </div>
     </div>
   );

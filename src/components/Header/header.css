@@ -1,0 +1,15 @@
+.header {
+  color: gray;
+  padding: 15px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 100px;
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom: 0px;
+  float: center;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin-top: 0px;
+}

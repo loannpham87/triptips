@@ -1,0 +1,50 @@
+.app {
+  margin-top: 0px;
+}
+
+.logo {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 200px;
+}
+
+.bkg-photo {
+  width: 100%;
+  height: auto;
+  /* z-index: 1; */
+}
+
+.btn-container {
+  /* position: relative; */
+  width: 100%;
+  z-index: 1;
+  margin-top: 0px;
+}
+
+.btn-container img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 24px;
+  font-family: "Special Elite", cursive;
+  padding: 24px 48px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-container .btn:hover {
+  background-color: black;
+}

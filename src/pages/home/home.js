@@ -3,10 +3,12 @@ import "./home.css";
 
 function Home() {
   return (
-    <div className="App">
-      <header className="main-header">
-        <img src="../transparent-bkg.png" className="logo" alt="logo" />
-      </header>
+    <React.Fragment>
+      <div className="App">
+        <header className="main-header">
+          <img src="../transparent-bkg.png" className="logo" alt="logo" />
+        </header>
+      </div>
 
       <div className="btn-container">
         <img
@@ -15,21 +17,25 @@ function Home() {
           alt="background photo"
         />
 
-        <button className="btn">
-          <a href="/login">Login / Signup</a>
+        <button className="btn-login">
+          <a href="/login">Login</a>
         </button>
 
-        <div className="dev-cred">
-          <footer>
-            For more info on the devs of this project, please check out our
-            GitHub portfolios:{" "}
-            <a href="https://github.com/AmandaLuane"> Amanda Johnson |</a>
-            <a href="https://github.com/loannpham87"> Loann Pham |</a>
-            <a href="https://github.com/rdweston1995"> Robert Weston</a>
-          </footer>
-        </div>
+        <button className="btn">
+          <a href="/signup">Signup</a>
+        </button>
       </div>
-    </div>
+
+      <div className="dev-cred">
+        <footer>
+          For more info on the devs of this project, please check out our GitHub
+          portfolios:{" "}
+          <a href="https://github.com/AmandaLuane"> Amanda Johnson |</a>
+          <a href="https://github.com/loannpham87"> Loann Pham |</a>
+          <a href="https://github.com/rdweston1995"> Robert Weston</a>
+        </footer>
+      </div>
+    </React.Fragment>
   );
 }
 

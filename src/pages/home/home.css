@@ -14,11 +14,9 @@
 .bkg-photo {
   width: 100%;
   height: auto;
-  /* z-index: 1; */
 }
 
 .btn-container {
-  /* position: relative; */
   width: 100%;
   z-index: 1;
   margin-top: 0px;
@@ -31,10 +29,26 @@
 
 .btn-container .btn {
   position: absolute;
-  top: 50%;
+  top: 90%;
   left: 50%;
+}
+
+.btn  {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 24px;
+  font-family: "Special Elite", cursive;
+  padding: 24px 48px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-login {
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
   background-color: #555;
   color: white;
   font-size: 24px;

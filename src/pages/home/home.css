@@ -33,7 +33,7 @@
   left: 50%;
 }
 
-.btn  {
+.btn {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;

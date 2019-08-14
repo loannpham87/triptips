@@ -1,0 +1,40 @@
+.login-form {
+  position: absolute;
+  top: 70%;
+ right: 10%;
+  z-index: 1;
+}
+
+.bkg-photo {
+  z-index: 0;
+  height: auto;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
+
+.bkg {
+    background-color: black;
+
+}
+
+.login-btn {
+  background-color: #555;
+  color: white;
+  font-size: 24px;
+  font-family: "Special Elite", cursive;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  text-decoration: none;
+  width: 200px;
+}
+
+.login-btn:hover {
+    background-color: black;
+    text-decoration: none;
+  }

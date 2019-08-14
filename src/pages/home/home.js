@@ -22,10 +22,15 @@ function Home() {
         <button className="btn">
           <a href="/login">Login</a>
         </button>
+        <br />
 
         <button className="btn">
           <a href="/signup">Signup</a>
         </button>
+      </div>
+
+      <div className="brand-statement">
+        <p>Travel well. Travel better.</p>
       </div>
 
       <div className="dev-cred">

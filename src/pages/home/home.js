@@ -10,14 +10,16 @@ function Home() {
         </header>
       </div>
 
-      <div className="btn-container">
+      <div className="bkg">
         <img
           src="../initial-login-bkg-photo.jpg"
           className="bkg-photo"
           alt="background photo"
         />
+      </div>
 
-        <button className="btn-login">
+      <div className="btn-container">
+        <button className="btn">
           <a href="/login">Login</a>
         </button>
 

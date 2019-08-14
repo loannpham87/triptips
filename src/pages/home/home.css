@@ -14,23 +14,14 @@
 .bkg-photo {
   width: 100%;
   height: auto;
+  z-index: 0;
 }
 
 .btn-container {
-  width: 100%;
-  z-index: 1;
-  margin-top: 0px;
-}
-
-.btn-container img {
-  width: 100%;
-  height: auto;
-}
-
-.btn-container .btn {
+  top: 50%;
+  left: 45%;
   position: absolute;
-  top: 90%;
-  left: 50%;
+  z-index: 1;
 }
 
 .btn {
@@ -44,38 +35,31 @@
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  margin: 10px;
+  text-decoration: none;
 }
 
-.btn-login {
-  /* transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); */
-  background-color: #555;
-  color: white;
-  font-size: 24px;
-  font-family: "Special Elite", cursive;
-  padding: 24px 48px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.btn-container .btn:hover {
+.btn:hover {
   background-color: black;
+  text-decoration: none;
 }
 
 .dev-cred {
   color: gray;
   text-align: center;
+  margin-bottom: 7px;
 }
 
 a:hover {
   color: skyblue;
   background-color: white;
+  text-decoration: none;
 }
 
 a:visited {
   color: gray;
   background-color: black;
+  text-decoration: none;
 }
 
 footer {

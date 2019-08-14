@@ -29,9 +29,7 @@ function Home() {
         </button>
       </div>
 
-      <div className="brand-statement">
-        <p>Travel well. Travel better.</p>
-      </div>
+  
 
       <div className="dev-cred">
         <footer>

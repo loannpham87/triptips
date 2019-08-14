@@ -1,7 +1,7 @@
 .login-form {
   position: absolute;
   top: 70%;
- right: 10%;
+  right: 10%;
   z-index: 1;
 }
 
@@ -16,8 +16,7 @@
 }
 
 .bkg {
-    background-color: black;
-
+  background-color: black;
 }
 
 .login-btn {
@@ -35,6 +34,29 @@
 }
 
 .login-btn:hover {
-    background-color: black;
-    text-decoration: none;
-  }
+  background-color: black;
+  text-decoration: none;
+}
+
+.dev-cred {
+  color: gray;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+a:hover {
+  color: skyblue;
+  background-color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: gray;
+  background-color: black;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 10px;
+  margin-bottom: 7px;
+}

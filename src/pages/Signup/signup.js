@@ -41,7 +41,7 @@ function Signup() {
                       <img
                         src="../local-eats.jpg"
                         class="d-block w-100"
-                        alt="..."
+                        alt="local eats"
                         className="d-block"
                       />
                       <div class="carousel-caption d-none d-md-block">
@@ -54,7 +54,7 @@ function Signup() {
                       <img
                         src="../culture.jpg"
                         class="d-block w-100"
-                        alt="..."
+                        alt="culture"
                         className="d-block"
                       />
                       <div class="carousel-caption d-none d-md-block">
@@ -67,7 +67,7 @@ function Signup() {
                       <img
                         src="../stay.jpg"
                         class="d-block w-100"
-                        alt="..."
+                        alt="stay"
                         className="d-block"
                       />
                       <div class="carousel-caption d-none d-md-block">
@@ -106,7 +106,7 @@ function Signup() {
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="First name"
+                    placeholder="First Name"
                   />
                 </div>
 
@@ -114,7 +114,7 @@ function Signup() {
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Last name"
+                    placeholder="Last Name"
                   />
                 </div>
 
@@ -122,7 +122,7 @@ function Signup() {
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="email address"
+                    placeholder="Email address"
                   />
                 </div>
                 <div class="form-group">

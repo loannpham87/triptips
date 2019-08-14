@@ -149,7 +149,7 @@ function Signup() {
               </form>
 
               <button className="signup-btn">
-                <a href="#">Sign-up</a>
+                <a href="/profile">Sign-up</a>
               </button>
             </div>
           </div>

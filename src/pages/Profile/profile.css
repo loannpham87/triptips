@@ -1,0 +1,23 @@
+.dev-cred {
+    color: gray;
+    text-align: center;
+    margin-bottom: 7px;
+  }
+  
+  a:hover {
+    color: skyblue;
+    background-color: white;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: gray;
+    background-color: black;
+    text-decoration: none;
+  }
+  
+  footer {
+    margin-top: 10px;
+    margin-bottom: 7px;
+  }
+  

@@ -6,13 +6,13 @@ function Login() {
     <React.Fragment>
       <div className="App">
         <header className="main-header">
-          <img src="../transparent-bkg.png" className="logo" alt="logo" />
+          <img src="./../../images/transparent-bkg.png" className="logo" alt="logo" />
         </header>
       </div>
 
       <div className="bkg">
         <img
-          src="../login-bkg-photo.jpg"
+          src="./../../images/login-bkg-photo.jpg"
           className="bkg-photo"
           alt="background photo"
         />

@@ -6,13 +6,14 @@ function Home() {
     <React.Fragment>
       <div className="App">
         <header className="main-header">
-          <img src="../transparent-bkg.png" className="logo" alt="logo" />
+          <img src="./../../images/transparent-bkg.png" className="logo" alt="logo" />
+          transparent-bkg.png
         </header>
       </div>
 
       <div className="bkg">
         <img
-          src="../initial-login-bkg-photo.jpg"
+          src="./../../images/initial-login-bkg-photo.jpg"
           className="bkg-photo"
           alt="background photo"
         />

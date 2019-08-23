@@ -47,6 +47,24 @@ import "./login.css";
 // }
 
 class Login extends Component {
+  state = {
+    username: "",
+    password: ""
+  }
+
+  handleChange = event => {
+    const {name, value} = event.target;
+    this.setState({
+      [name]: value
+    });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log("Username " + this.state.username);
+    console.log("Password " + this.state.password);
+  }
+
   render(){
     return(
       <React.Fragment>
@@ -64,26 +82,31 @@ class Login extends Component {
         />
 
         <div className="login-form">
-          <div class="col">
+          <div className="col">
             <form>
-              <div class="form-group">
+              <div className="form-group">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
+                  name="username"
                   placeholder="username"
+                  onChange={this.handleChange}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <input
                   type="password"
-                  class="form-control"
+                  className="form-control"
+                  name="password"
                   placeholder="password"
+                  onChange={this.handleChange}
                 />
               </div>
             </form>
 
-            <button className="login-btn">
-              <a href="/profile">Login</a>
+            <button className="login-btn" onClick={this.handleSubmit}>
+              Login
+              {/* <a href="/profile">Login</a> */}
             </button>
           </div>
         </div>

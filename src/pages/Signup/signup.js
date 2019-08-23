@@ -91,6 +91,7 @@ function Signup() {
                   href="#carouselExampleCaptions"
                   role="button"
                   data-slide="next"
+                  // onClick={carouselScroll}
                 >
                   <span class="carousel-control-next-icon" aria-hidden="true" />
                   <span class="sr-only">Next</span>
@@ -122,28 +123,28 @@ function Signup() {
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Email address"
+                    placeholder="Email Address"
                   />
                 </div>
                 <div class="form-group">
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="username"
+                    placeholder="Username"
                   />
                 </div>
                 <div class="form-group">
                   <input
                     type="password"
                     class="form-control"
-                    placeholder="password"
+                    placeholder="Password"
                   />
                 </div>
                 <div class="form-group">
                   <input
                     type="password"
                     class="form-control"
-                    placeholder="confirm password"
+                    placeholder="Confirm Password"
                   />
                 </div>
               </form>
@@ -168,5 +169,15 @@ function Signup() {
     </React.Fragment>
   );
 }
+
+// function carouselScroll() {
+//   function handleClick(e) {
+//     e.preventDegault();
+//   }
+// }
+
+// return (
+
+// )
 
 export default Signup;

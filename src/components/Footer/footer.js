@@ -3,6 +3,7 @@ import "./footer.css";
 
 function Footer(){
     return(
+      <React.Fragment>
         <div className="dev-cred">
         <footer>
           For more info on the devs of this project, please check out our GitHub
@@ -12,6 +13,7 @@ function Footer(){
           <a href="https://github.com/rdweston1995"> Robert Weston</a>
         </footer>
       </div>
+      </React.Fragment>
     )
 }
 

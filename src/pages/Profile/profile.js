@@ -9,6 +9,10 @@ function Profile() {
         <header className="main-header">
           <img src="./../../images/transparent-bkg.png" className="logo" alt="logo" />
         </header>
+
+        <div>
+          <Post/>
+        </div>
       </div>
     </React.Fragment>
   );

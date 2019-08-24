@@ -13,6 +13,10 @@ function Profile() {
             alt="logo"
           />
         </header>
+
+        <div>
+          <Post/>
+        </div>
       </div>
 
       <div>

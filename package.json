@@ -3,9 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apollo-boost": "^0.4.4",
     "bootstrap": "^4.3.1",
+
     "mongoose": "^5.6.10",
+
+    "graphql": "^14.5.3",
+    "graphql-tag": "^2.10.1",
+    "pusher-js": "^5.0.0",
+
     "react": "^16.9.0",
+    "react-apollo": "^3.0.1",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.0"
@@ -14,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "cd src && npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"

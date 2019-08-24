@@ -22,15 +22,15 @@
 //   useNewUrlParser: true
 // });
 
-let mongoose = require("mongoose");
-let express = require("express");
-let app = express();
-const path = require("path");
-const PORT = process.env.PORT || 3000;
+// let mongoose = require("mongoose");
+// let express = require("express");
+// let app = express();
+// const path = require("path");
+// const PORT = process.env.PORT || 3000;
 
-mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/", {
-  useNewUrlParser: true
-});
+// mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/", {
+//   useNewUrlParser: true
+// });
 
 
 // const isLocalhost = Boolean(

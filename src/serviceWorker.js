@@ -36,7 +36,7 @@ export function register(config) {
     // The URL constructor is available in all browsers that support SW.
     app.use(express.static("src/build"));
     app.get("*", () => () => {
-      res.sendFile(path.joim(__dirname, "src", "build", "index.html")); //relative path
+      res.sendFile(path.join(__dirname, "src", "build", "index.html")); //relative path
     })
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
     if (publicUrl.origin !== window.location.origin) {

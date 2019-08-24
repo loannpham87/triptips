@@ -16,7 +16,7 @@ class App extends Component {
       <Router>
         <div>
           <Navbar />
-          <Header/>
+          <Header />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
@@ -30,4 +30,3 @@ class App extends Component {
   }
 }
 export default App;
-

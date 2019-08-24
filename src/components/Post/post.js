@@ -1,33 +1,38 @@
 
     import React, { Component } from "react";
-
     import "./post.css";
+    // import { Query } from "react-apollo";
+    // import gql from "graphql-tag";
 
 
     class Post extends Component {
       render() {
-        return <article className="Post" ref="Post">
+        const nickname = this.props.nickname;
+        const avatar = this.props.avatar;
+        const image = this.props.image;
+        const caption = this.props.caption;
+        return (
+          <article className="Post" ref="Post">
             <header>
               <div className="Post-user">
                 <div className="Post-user-avatar">
-                  <img src="https://i.imgur.com/44Z37E8.jpg" alt="amandaLuane" />
-                  {/* <img src="https://www.laravelnigeria.com/img/chris.jpg" alt="Chris" /> */}
+                  <img src={avatar} alt={nickname} />
                 </div>
                 <div className="Post-user-nickname">
-                  <span>AmandaLuane</span>
+                  <span>{nickname}</span>
                 </div>
               </div>
             </header>
             <div className="Post-image">
               <div className="Post-image-bg">
-                {/* <img alt="Icon Living" src="https://pbs.twimg.com/media/DOXI0IEXkAAkokm.jpg" /> */}
-                <img alt="Icon Living" src="https://i.imgur.com/9HFge0U.jpg" />
+                <img alt={caption} src={image} />
               </div>
             </div>
             <div className="Post-caption">
-              <strong>AmandaLuane</strong> Mount Tolmie
+              <strong>{nickname}</strong> {caption}
             </div>
-          </article>;
-        }
+          </article>
+        );
+      }
     }
-    export default Post;
+export default Post;

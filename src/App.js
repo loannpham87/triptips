@@ -31,6 +31,7 @@ const client = new ApolloClient({
          encrypted: true
         });
       }
+
       render() {
         return (
         <Router>

@@ -1,10 +1,47 @@
-let express = require("express");
-let graphqlHTTP = require("express-graphql");
-let { buildSchema } = require("graphql");
-let cors = require("cors");
-let Pusher = require("pusher");
-let bodyParser = require("body-parser");
-let Multipart = require("connect-multiparty");
+const express = require("express");
+const bodyParser = require("body-parser");
+const morgan = require("morgan");
+const session = require("express-session");
+const dbConnection = require("./database");
+const MongoStore = require("connect-mongo")(session);
+const passport = require("./passport");
+const graphqlHTTP = require("express-graphql");
+const { buildSchema } = require("graphql");
+const cors = require("cors");
+const Pusher = require("pusher");
+const Multipart = require("connect-multiparty");
+
+const app = express();
+const PORT = 4000;
+
+const user = require("./routes/user");
+
+// MIDDLEWARE
+app.use(morgan("dev"));
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+);
+
+app.use(bodyParser.json());
+
+app.use(
+  session({
+    secret: "fraggle-rock",
+    store: new MongoStore({ mongooseConnection: dbConnection}),
+    resave: false,
+    saveUninitialized: false
+  })
+);
+
+// Passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Routes
+app.use("/user", user);
+
 
 
 //GraphQL Schema - User, Post, Query 
@@ -84,7 +121,7 @@ let root = {
 
 
   //express app (incoming requests)
-  let app = express();
+  // let app = express();
   app.use(cors());
   app.use(
     "/graphql",
@@ -129,4 +166,6 @@ let root = {
 
      //set application port
 
-  app.listen(4000);
+ app.listen(PORT, () => {
+   console.log(`App listening on PORT: ${PORT}`);
+ })

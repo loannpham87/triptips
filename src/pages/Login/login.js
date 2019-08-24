@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Loginform from "./../../components/loginForm/loginForm";
 import "./login.css";
 
 // function Login() {
@@ -75,39 +76,15 @@ class Login extends Component {
       </div>
 
       <div className="bkg">
-        <img
+        {/* <img
           src="./../../images/login-bkg-photo.jpg"
           className="bkg-photo"
           alt="background"
-        />
+        /> */}
 
         <div className="login-form">
           <div className="col">
-            <form>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  name="username"
-                  placeholder="username"
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="password"
-                  className="form-control"
-                  name="password"
-                  placeholder="password"
-                  onChange={this.handleChange}
-                />
-              </div>
-            </form>
-
-            <button className="login-btn" onClick={this.handleSubmit}>
-              Login
-              {/* <a href="/profile">Login</a> */}
-            </button>
+            <Loginform />
           </div>
         </div>
       </div>

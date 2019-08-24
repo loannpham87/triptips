@@ -11,6 +11,17 @@
 // opt-in, read https://bit.ly/CRA-PWA
 
 
+
+// let mongoose = require("mongoose");
+// let express = require("express");
+// let app = express();
+// const path = require("path");
+// const PORT = process.env.PORT || 3000;
+
+// mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/", {
+//   useNewUrlParser: true
+// });
+
 let mongoose = require("mongoose");
 let express = require("express");
 let app = express();
@@ -20,6 +31,7 @@ const PORT = process.env.PORT || 3000;
 mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/", {
   useNewUrlParser: true
 });
+
 
 // const isLocalhost = Boolean(
 //   window.location.hostname === 'localhost' ||
@@ -34,10 +46,7 @@ mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/", {
 export function register(config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
-    app.use(express.static("src/build"));
-    app.get("*", () => () => {
-      res.sendFile(path.joim(__dirname, "src", "build", "index.html")); //relative path
-    })
+
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
     if (publicUrl.origin !== window.location.origin) {
       // Our service worker won't work if PUBLIC_URL is on a different origin

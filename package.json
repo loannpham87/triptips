@@ -5,9 +5,13 @@
   "dependencies": {
     "apollo-boost": "^0.4.4",
     "bootstrap": "^4.3.1",
+
+    "mongoose": "^5.6.10",
+
     "graphql": "^14.5.3",
     "graphql-tag": "^2.10.1",
     "pusher-js": "^5.0.0",
+
     "react": "^16.9.0",
     "react-apollo": "^3.0.1",
     "react-dom": "^16.9.0",

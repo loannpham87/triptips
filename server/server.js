@@ -7,8 +7,21 @@ let bodyParser = require("body-parser");
 let Multipart = require("connect-multiparty");
 const path = require("path");
 
+let mongoose = require("mongoose");
+let express = require("express");
+let app = express();
+const path = require("path");
+const PORT = process.env.PORT || 3000;
 
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/", {
+  useNewUrlParser: true
+});
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("src/build"));
+    app.get("*", () => () => {
+      res.sendFile(path.join(__dirname, "src", "build", "index.html")); //relative path
+};
 
 //GraphQL Schema - User, Post, Query 
 let schema = buildSchema(`

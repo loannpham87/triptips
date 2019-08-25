@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Form from "./../../components/form/form";
+import Input from "./../../components/input/input";
+import Button from "./../../components/button/button";
 import "./loginForm.css";
 
 class loginForm extends Component {
@@ -24,17 +27,11 @@ class loginForm extends Component {
     render() {
         return(
             <React.Fragment>
-                <form>
-                    <div className="form-group">
-                        <input type="text" className="form-control" name="username" placeholder="username" onChange={this.handleChange}/>
-                    </div>
-
-                    <div className="form-group">
-                        <input type="password" className="form-control" name="password" placeholder="password" onChange={this.handleChange}/>
-                    </div>
-                </form>
-
-                <button className="login-btn" onClick={this.handleSubmit}>Login</button>
+                <Form>
+                    <Input type="text" className="form-control" name="username" placeholder="username" onChange={this.handleChange}/>
+                    <Input type="password" className="form-control" name="password" placeholder="password" onChange={this.handleChange}/>
+                </Form>
+                <Button className="login-btn" onClick={this.handleSubmit} text="Login"/>
             </React.Fragment>
         )
     }

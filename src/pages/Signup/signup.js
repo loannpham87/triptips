@@ -1,202 +1,56 @@
 import React, { Component } from "react";
 // import "bootstrap/dist/css.bootstrap.css";
-import SignUpForm from "./../../components/signupForm/signupForm";
+// import SignUpForm from "./../../components/signupForm/signupForm";
+import Form from "./../../components/form/form";
+import Input from "./../../components/input/input";
+import Button from "./../../components/button/button";
 import "./signup.css";
 
-// function Signup() {
-//   return (
-//     <React.Fragment>
-//       <div className="App">
-//         <header className="main-header">
-//           <img src="./../../images/transparent-bkg.png" className="logo" alt="logo" />
-//         </header>
-//       </div>
-
-//       <div class="container">
-//         <div class="row">
-//           <div class="col">
-//             <div className="carousel">
-//               <div class="bd-example">
-//                 <div
-//                   id="carouselExampleCaptions"
-//                   class="carousel slide"
-//                   data-ride="carousel"
-//                 >
-//                   <ol class="carousel-indicators">
-//                     <li
-//                       data-target="#carouselExampleCaptions"
-//                       data-slide-to="0"
-//                       class="active"
-//                     />
-//                     <li
-//                       data-target="#carouselExampleCaptions"
-//                       data-slide-to="1"
-//                     />
-//                     <li
-//                       data-target="#carouselExampleCaptions"
-//                       data-slide-to="2"
-//                     />
-//                   </ol>
-//                   <div class="carousel-inner">
-//                     <div class="carousel-item active">
-//                       <img
-//                         src="../local-eats.jpg"
-//                         class="d-block w-100"
-//                         alt="local eats"
-//                         className="d-block"
-//                       />
-//                       <div class="carousel-caption d-none d-md-block">
-//                         <h5>Discover local eats.</h5>
-//                         <p>Check out the local food scene.</p>
-//                       </div>
-//                     </div>
-
-//                     <div class="carousel-item">
-//                       <img
-//                         src="../culture.jpg"
-//                         class="d-block w-100"
-//                         alt="culture"
-//                         className="d-block"
-//                       />
-//                       <div class="carousel-caption d-none d-md-block">
-//                         <h5>Immerse yourself in culture.</h5>
-//                         <p>Seek out historical sites.</p>
-//                       </div>
-//                     </div>
-
-//                     <div class="carousel-item">
-//                       <img
-//                         src="../stay.jpg"
-//                         class="d-block w-100"
-//                         alt="stay"
-//                         className="d-block"
-//                       />
-//                       <div class="carousel-caption d-none d-md-block">
-//                         <h5>Stay somewhere with a view.</h5>
-//                         <p>That bucket list won't check itself.</p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-//                 <a
-//                   class="carousel-control-prev"
-//                   href="#carouselExampleCaptions"
-//                   role="button"
-//                   data-slide="prev"
-//                 >
-//                   <span class="carousel-control-prev-icon" aria-hidden="true" />
-//                   <span class="sr-only">Previous</span>
-//                 </a>
-//                 <a
-//                   class="carousel-control-next"
-//                   href="#carouselExampleCaptions"
-//                   role="button"
-//                   data-slide="next"
-//                   // onClick={carouselScroll}
-//                 >
-//                   <span class="carousel-control-next-icon" aria-hidden="true" />
-//                   <span class="sr-only">Next</span>
-//                 </a>
-//               </div>
-//             </div>
-//           </div>
-
-//           <div class="col">
-//             <div className="signup">
-//               <SignUpForm />
-//               {/* <form>
-//                 <div class="form-group">
-//                   <input
-//                     type="text"
-//                     class="form-control"
-//                     placeholder="First Name"
-//                   />
-//                 </div>
-
-//                 <div class="form-group">
-//                   <input
-//                     type="text"
-//                     class="form-control"
-//                     placeholder="Last Name"
-//                   />
-//                 </div>
-
-//                 <div class="form-group">
-//                   <input
-//                     type="text"
-//                     class="form-control"
-//                     placeholder="Email Address"
-//                   />
-//                 </div>
-//                 <div class="form-group">
-//                   <input
-//                     type="text"
-//                     class="form-control"
-//                     placeholder="Username"
-//                   />
-//                 </div>
-//                 <div class="form-group">
-//                   <input
-//                     type="password"
-//                     class="form-control"
-//                     placeholder="Password"
-//                   />
-//                 </div>
-//                 <div class="form-group">
-//                   <input
-//                     type="password"
-//                     class="form-control"
-//                     placeholder="Confirm Password"
-//                   />
-//                 </div>
-//               </form> */}
-
-//               <button className="signup-btn">
-//                 <a href="/profile">Sign-up</a>
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </React.Fragment>
-//   );
-// }
-
-// function carouselScroll() {
-//   function handleClick(e) {
-//     e.preventDegault();
-//   }
-// }
-
-// return (
-
-// )
-
 class Signup extends Component {
+  state={
+    firstName: "",
+    lastName: "",
+    username: "",
+    email: "",
+    password: "",
+    confrimPassword: ""
+  }
+
+  handleChange = event => {
+    const {name, value} = event.target;
+    this.setState({ [name] : value});
+    // console.log(this.state());
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log(this.state);
+  }
+
   render() {
     return (
       <React.Fragment>
-        <div className="App">
+        {/* <div className="App">
           <header className="main-header">
             <img src="./../../images/transparent-bkg.png" className="logo" alt="logo" />
           </header>
-        </div>
+        </div> */}
   
-        <div class="container">
-          <div class="row">
-            <div class="col">
+        <div className="container">
+          <div className="row">
+            <div className="col">
               <div className="carousel">
-                <div class="bd-example">
+                <div className="bd-example">
                   <div
                     id="carouselExampleCaptions"
-                    class="carousel slide"
+                    className="carousel slide"
                     data-ride="carousel"
                   >
-                    <ol class="carousel-indicators">
+                    <ol className="carousel-indicators">
                       <li
                         data-target="#carouselExampleCaptions"
                         data-slide-to="0"
-                        class="active"
+                        className="active"
                       />
                       <li
                         data-target="#carouselExampleCaptions"
@@ -207,41 +61,39 @@ class Signup extends Component {
                         data-slide-to="2"
                       />
                     </ol>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
                         <img
                           src="../local-eats.jpg"
-                          class="d-block w-100"
+                          className="d-block w-100"
                           alt="local eats"
-                          className="d-block"
+                          
                         />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                           <h5>Discover local eats.</h5>
                           <p>Check out the local food scene.</p>
                         </div>
                       </div>
   
-                      <div class="carousel-item">
+                      <div className="carousel-item">
                         <img
                           src="../culture.jpg"
-                          class="d-block w-100"
+                          className="d-block w-100"
                           alt="culture"
-                          className="d-block"
                         />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                           <h5>Immerse yourself in culture.</h5>
                           <p>Seek out historical sites.</p>
                         </div>
                       </div>
   
-                      <div class="carousel-item">
+                      <div className="carousel-item">
                         <img
                           src="../stay.jpg"
-                          class="d-block w-100"
+                          className="d-block w-100"
                           alt="stay"
-                          className="d-block"
                         />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                           <h5>Stay somewhere with a view.</h5>
                           <p>That bucket list won't check itself.</p>
                         </div>
@@ -249,31 +101,42 @@ class Signup extends Component {
                     </div>
                   </div>
                   <a
-                    class="carousel-control-prev"
+                    className="carousel-control-prev"
                     href="#carouselExampleCaptions"
                     role="button"
                     data-slide="prev"
                   >
-                    <span class="carousel-control-prev-icon" aria-hidden="true" />
-                    <span class="sr-only">Previous</span>
+                    <span className="carousel-control-prev-icon" aria-hidden="true" />
+                    <span className="sr-only">Previous</span>
                   </a>
                   <a
-                    class="carousel-control-next"
+                    className="carousel-control-next"
                     href="#carouselExampleCaptions"
                     role="button"
                     data-slide="next"
                     // onClick={carouselScroll}
                   >
-                    <span class="carousel-control-next-icon" aria-hidden="true" />
-                    <span class="sr-only">Next</span>
+                    <span className="carousel-control-next-icon" aria-hidden="true" />
+                    <span className="sr-only">Next</span>
                   </a>
                 </div>
               </div>
             </div>
   
-            <div class="col">
+            <div className="col">
               <div className="signup">
-                <SignUpForm />  
+                {/* <SignUpForm />   */}
+                <Form>
+                  <Input type="text" name="firstName" className="form-control" placeholder="First Name" onChange={this.handleChange}/>
+                  <Input type="text" name="lastName" className="form-control" placeholder="Last Name" onChange={this.handleChange}/>
+                  <Input type="text" name="username" className="form-control" placeholder="Username" onChange={this.handleChange}/>
+                  <Input type="text" name="email" className="form-control" placeholder="Email" onChange={this.handleChange}/>
+                  <Input type="password" name="password" className="form-control" placeholder="Password" onChange={this.handleChange}/>
+                  <Input type="password" name="confrimPassword" className="form-control" placeholder="Confrim Password" onChange={this.handleChange}/>
+                </Form>
+
+                {/* <button className="btn btn-success" type="button" onClick={this.handleSubmit}>Submit</button> */}
+                <Button className="btn btn-success" type="button" onClick={this.handleSubmit} text="Submit"/>
                 
               </div>
             </div>

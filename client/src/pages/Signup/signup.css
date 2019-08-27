@@ -1,0 +1,47 @@
+
+.carousel {
+  display: block;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  right: 50;
+  background-color: rgb(201, 157, 37);
+}
+
+.d-block {
+  height: 500px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+.signup {
+  display: block;
+  position: absolute;
+  float: right;
+  width: 60%;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 50px;
+}
+
+.signup-btn {
+  margin-top: 10px;
+  float: right;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 12px 24px;
+  background-color: #555;
+  color: white;
+  font-family: "Special Elite", cursive;
+}
+
+.signup-btn:hover {
+  color: #555;
+  background-color: white;
+}
+

@@ -1,0 +1,58 @@
+.header {
+  color: gray;
+  padding: 15px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 100px;
+  /* margin-top: 0px; */
+  text-align: center;
+  margin-bottom: 0px;
+  /* float: center; */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin-top: 0px;
+
+
+  border-bottom: 3px solid rgba(0, 0, 0, 0.0975);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+  height: 77px;
+}
+
+.brand-statement {
+  font-family: "Special Elite", cursive;
+  font-size: 24px;
+  text-align: center;
+  position: absolute;
+  right: 68%;
+  top: 2%;
+  font-weight: bolder;
+}
+
+/* .Nav-menus {
+  display: flex;
+  flex-direction: row;
+  height: 77px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 26px 40px;
+} */
+
+i.Nav {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+  height: 77px;
+}
+
+

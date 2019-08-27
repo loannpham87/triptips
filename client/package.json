@@ -17,8 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "eslint-utils": ">=1.4.1"
   },
   "browserslist": {
     "production": [

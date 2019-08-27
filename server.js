@@ -6,11 +6,8 @@ let Pusher = require("pusher");
 let bodyParser = require("body-parser");
 let Multipart = require("connect-multiparty");
 const path = require("path");
-
 let mongoose = require("mongoose");
-let express = require("express");
 let app = express();
-const path = require("path");
 const PORT = process.env.PORT || 3000;
 
 mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/", {
@@ -100,7 +97,6 @@ let root = {
 
 
   //express app (incoming requests)
-  let app = express();
   app.use(cors());
   app.use(
     "/graphql",

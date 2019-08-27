@@ -2,15 +2,18 @@
   "name": "triptips",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4000/",
   "dependencies": {
+    "apollo-boost": "^0.4.4",
     "bootstrap": "^4.3.1",
+    "eslint-utils": ">=1.4.1",
     "mongoose": "^5.6.10",
+    "pusher-js": "^5.0.0",
     "react": "^16.9.0",
     "react-apollo": "^3.0.1",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.0",
-    "eslint-utils": ">=1.4.1"
+    "react-scripts": "3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

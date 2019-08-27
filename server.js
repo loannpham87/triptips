@@ -8,16 +8,16 @@ let Multipart = require("connect-multiparty");
 const path = require("path");
 let mongoose = require("mongoose");
 let app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/loann", {
   useNewUrlParser: true
 });
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("src/build"));
+  app.use(express.static("client/build"));
   app.get("*", () => () => {
-    res.sendFile(path.join(__dirname, "src", "build", "index.html")); //relative path
+    res.sendFile(path.join(__dirname, "client", "build", "index.html")); //relative path
   });
 }
 
@@ -139,4 +139,4 @@ app.post("/newpost", multipartMiddleware, (req, res) => {
 
 //set application port
 
-app.listen(4000);
+app.listen(PORT);

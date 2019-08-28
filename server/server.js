@@ -1,10 +1,12 @@
+//Robert
 const express = require("express");
 const bodyParser = require("body-parser");
-const morgan = require("morgan");
-const session = require("express-session");
-const dbConnection = require("./database");
-const MongoStore = require("connect-mongo")(session);
-const passport = require("./passport");
+const passport = require("passport");
+const mongoose = require("mongoose");
+
+const users = require("./routes/api/users");
+
+//Amanda
 const graphqlHTTP = require("express-graphql");
 const { buildSchema } = require("graphql");
 const cors = require("cors");
@@ -12,37 +14,32 @@ const Pusher = require("pusher");
 const Multipart = require("connect-multiparty");
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
-const user = require("./routes/user");
-
-// MIDDLEWARE
-app.use(morgan("dev"));
+//Robert
 app.use(
   bodyParser.urlencoded({
     extended: false
   })
 );
+app.user(bodyParser.json());
 
-app.use(bodyParser.json());
+//DB config
+const db = require("./config/keys").mongoURI;
 
-app.use(
-  session({
-    secret: "fraggle-rock",
-    store: new MongoStore({ mongooseConnection: dbConnection}),
-    resave: false,
-    saveUninitialized: false
-  })
-);
+//Connect to mongoDB
+mongoose.connect(db, { useNewUrlParser: true }).then(() => console.log("MongoDB successfully connected")).catch(err => console.log(err));
 
-// Passport
+//Passport middleware
 app.use(passport.initialize());
-app.use(passport.session());
 
-// Routes
-app.use("/user", user);
+//Passport config
+require("./config/passport")(passport);
 
+//Routes
+app.user("/api/users", users);
 
+// Amanda
 
 //GraphQL Schema - User, Post, Query 
 let schema = buildSchema(`

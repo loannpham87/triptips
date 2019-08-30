@@ -1,0 +1,39 @@
+{
+  "name": "triptips",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:4000/",
+  "dependencies": {
+    "apollo-boost": "^0.4.4",
+    "bootstrap": "^4.3.1",
+    "eslint-utils": ">=1.4.1",
+    "mongoose": "^5.6.10",
+    "pusher-js": "^5.0.0",
+    "react": "^16.9.0",
+    "react-apollo": "^3.0.1",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": "10.15.2"
+  }
+}

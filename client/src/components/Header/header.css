@@ -17,7 +17,13 @@
   border-bottom: 3px solid rgba(0, 0, 0, 0.0975);
   position: fixed;
   top: 0;
-  
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+  height: 77px;
+}
+
 .brand-statement {
   font-family: "Special Elite", cursive;
   font-size: 24px;

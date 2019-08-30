@@ -12,18 +12,14 @@
   top: 0;
   right: 0;
   margin-top: 0px;
-
-
-  border-bottom: 3px solid rgba(0, 0, 0, 0.0975);
   position: fixed;
-  top: 0;
+  top: 200;
   width: 100%;
   z-index: 2;
   -webkit-transition: height 0.2s ease-in-out;
   transition: height 0.2s ease-in-out;
   height: 77px;
 }
-
 .brand-statement {
   font-family: "Special Elite", cursive;
   font-size: 24px;
@@ -33,7 +29,6 @@
   top: 2%;
   font-weight: bolder;
 }
-
 /* .Nav-menus {
   display: flex;
   flex-direction: row;
@@ -41,8 +36,7 @@
   width: 70%;
   margin: 0 auto;
   padding: 26px 40px;
-} */
-
+ } */
 i.Nav {
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
@@ -54,5 +48,3 @@ i.Nav {
   transition: height 0.2s ease-in-out;
   height: 77px;
 }
-
-

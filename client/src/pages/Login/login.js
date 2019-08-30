@@ -18,9 +18,9 @@ class Login extends Component {
 
   componentDidMount() {
     //If logged in and user navigates to Login page, should redirect them to the profile page
-    if(this.props.auth.isAuthenticated) {
-      this.props.history.push("/profile");
-    }
+    // if(this.props.auth.isAuthenticated) {
+    //   this.props.history.push("/profile");
+    // }
   }
 
   getDerivedStateFromProps(nextProps) {
@@ -35,14 +35,14 @@ class Login extends Component {
     }
   }
 
-  handleChange = event => {
+  onChange = event => {
     const {name, value} = event.target;
     this.setState({
       [name]: value
     });
   }
 
-  handleSubmit = event => {
+  onSubmit = event => {
     event.preventDefault();
 
     const userData = {

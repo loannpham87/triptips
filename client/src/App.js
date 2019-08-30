@@ -8,7 +8,6 @@ import { Provider } from "react-redux";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import store from "./store";
-import ApolloClient from 'apollo-boost';
 
 import Home from "./pages/Home/home";
 import Login from "./pages/Login/login.js";
@@ -61,27 +60,21 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Router>
-          <div>
-
-            <Navbar />
-            <ApolloProvider client={client}>
-              <div className="App">
-                <Header />
-                <Switch>
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/login" component={Login} />
-                  <Route exact path="/signup" component={Signup} />
-                  <Route exact path="/profile" component={Profile} />
-                </Switch>
-                {/* <section className="App-main">
-                  <Post />
-                </section> */}
-              </div>
-            </ApolloProvider>
-            <Footer />
-          </div>
-        </Router>
+<Router>
+<div className="App">
+<Navbar />
+<Header />
+<Wrapper>
+<Switch>
+<Route exact path="/" component={Home} />
+<Route exact path="/login" component={Login} />
+<Route exact path="/signup" component={Signup} />
+<Route exact path="/profile" component={Profile} />
+</Switch>
+</Wrapper>
+<Footer />
+</div>
+</Router>
       </Provider>
     );
   }

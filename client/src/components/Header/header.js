@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import "./header.css";
+// import Navbar from "./components/NavBar/navbar";
+
 
 class Header extends Component {
   render() {
     return (
       <React.Fragment>
+        {/* <Navbar/> */}
         <nav className="Nav">
           <div className="Nav-menus">
             

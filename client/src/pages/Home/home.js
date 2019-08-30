@@ -2,14 +2,13 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 
-class Home extends Component{
+class Home extends Component {
   render(){
-    return(
-      <React.Fragment>
+  return (
+    <React.Fragment>
       <div className="App">
         <header className="main-header">
           <img src="./../../images/transparent-bkg.png" className="logo" alt="logo" />
-          transparent-bkg.png
         </header>
       </div>
 
@@ -42,6 +41,7 @@ class Home extends Component{
       </div>
 
     </React.Fragment>
+
     )
   }
 }

@@ -43,7 +43,7 @@ function Signup() {
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img
-                        src="../local-eats.jpg"
+                        src="./../../images/local-eats.jpg"
                         class="d-block w-100"
                         alt="local eats"
                         className="d-block"
@@ -56,7 +56,7 @@ function Signup() {
 
                     <div class="carousel-item">
                       <img
-                        src="../culture.jpg"
+                        src="./../../images/culture.jpg"
                         class="d-block w-100"
                         alt="culture"
                         className="d-block"
@@ -69,7 +69,7 @@ function Signup() {
 
                     <div class="carousel-item">
                       <img
-                        src="../stay.jpg"
+                        src="./../../images/stay.jpg"
                         class="d-block w-100"
                         alt="stay"
                         className="d-block"

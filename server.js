@@ -20,10 +20,13 @@ const db = require("./config/keys").mongoURI;
 
 //Connect to mongoDB
 mongoose
-  .connect(db, { useNewUrlParser: true })
-  .then(() => console.log("mongoDB successfully conencted"))
-  .catch(err => console.log(err));
-
+  // .connect(db, { useNewUrlParser: true })
+  // .then(() => console.log("mongoDB successfully conencted"))
+  // .catch(err => console.log(err));
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/triptips", {
+    useCreateIndex: true,
+    useNewUrlParser: true
+  });
 //Passport middleware
 app.use(passport.initialize());
 

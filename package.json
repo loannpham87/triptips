@@ -23,15 +23,18 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^4.1.0",
+    "concurrently": "^4.1.2",
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "connect-multiparty": "^2.2.0",
     "cors": "^2.8.5",
@@ -39,8 +42,13 @@
     "express-graphql": "^0.9.0",
     "graphql": "^14.5.3",
     "if-env": "^1.0.4",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.10",
-    "pusher": "^2.2.2"
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "pusher": "^2.2.2",
+    "validator": "^11.1.0"
   },
   "engines": {
     "node": "10.15.2"

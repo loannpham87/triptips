@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 
-// function Home() {
 class Home extends Component {
   render(){
   return (
@@ -16,23 +16,33 @@ class Home extends Component {
         <img
           src="./../../images/initial-login-bkg-photo.jpg"
           className="bkg-photo"
-          alt="background photo"
+          alt="background"
         />
       </div>
 
       <div className="btn-container">
-        <button className="btn">
-          <a href="/login">Login</a>
-        </button>
-        <br />
+        <div className="col s6">
+          <Link
+            to="/login"
+            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+            >
+              Login
+            </Link>
+        </div>
 
-        <button className="btn">
-          <a href="/signup">Signup</a>
-        </button>
+        <div className="col s6">
+          <Link
+            to="/signup"
+            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+            >
+              Sign Up
+            </Link>
+        </div>
       </div>
 
     </React.Fragment>
-  )
+
+    )
   }
 }
 

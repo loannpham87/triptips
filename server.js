@@ -156,4 +156,4 @@ app.post("/newpost", multipartMiddleware, (req, res) => {
 });
 
 //set application port
-app.listen(port, () => console.log(`Server up and running on port ${port} !`));
+app.listen(PORT, () => console.log(`Server up and running on port ${PORT} !`));

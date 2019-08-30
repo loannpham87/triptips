@@ -19,7 +19,8 @@ const PORT = process.env.PORT || 4000;
 const db = require("./config/keys").mongoURI;
 
 //Connect to mongoDB
-mongoose.connect(db, { userNewUrlParser: true })
+mongoose
+  .connect(db, { useNewUrlParser: true })
   .then(() => console.log("mongoDB successfully conencted"))
   .catch(err => console.log(err));
 

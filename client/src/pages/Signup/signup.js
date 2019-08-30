@@ -7,7 +7,11 @@ function Signup() {
     <React.Fragment>
       <div className="App">
         <header className="main-header">
-          <img src="./../../images/transparent-bkg.png" className="logo" alt="logo" />
+          <img
+            src="./../../images/transparent-bkg.png"
+            className="logo"
+            alt="logo"
+          />
         </header>
       </div>
 

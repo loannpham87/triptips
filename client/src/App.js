@@ -72,9 +72,9 @@ class App extends Component {
                   <Route exact path="/signup" component={Signup} />
                   <Route exact path="/profile" component={Profile} />
                 </Switch>
-                <section className="App-main">
+                {/* <section className="App-main">
                   <Post />
-                </section>
+                </section> */}
               </div>
             </ApolloProvider>
             <Footer />

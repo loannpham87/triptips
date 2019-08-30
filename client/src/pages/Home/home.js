@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import "./home.css";
 
-function Home() {
+// function Home() {
+class Home extends Component {
+  render(){
   return (
     <React.Fragment>
       <div className="App">
         <header className="main-header">
           <img src="./../../images/transparent-bkg.png" className="logo" alt="logo" />
-          transparent-bkg.png
         </header>
       </div>
 
@@ -31,7 +32,8 @@ function Home() {
       </div>
 
     </React.Fragment>
-  );
+  )
+  }
 }
 
 export default Home;

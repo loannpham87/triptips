@@ -33,9 +33,13 @@
   top: 2%;
   font-weight: bolder;
 }
-
+/* .Nav-menus {
+  display: flex;
+  flex-direction: row;
+  height: 77px;
+  width: 70%;
+  margin: 0 auto;
   padding: 26px 40px;
-} */
 
  } */
 i.Nav {

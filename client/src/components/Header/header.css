@@ -52,6 +52,7 @@ i.Nav {
   z-index: 2;
   -webkit-transition: height 0.2s ease-in-out;
   
+  
 i.Nav {
   transition: height 0.2s ease-in-out;
   height: 77px;

@@ -1,18 +1,36 @@
-let express = require("express");
-let graphqlHTTP = require("express-graphql");
-let { buildSchema } = require("graphql");
-let cors = require("cors");
-let Pusher = require("pusher");
-let bodyParser = require("body-parser");
-let Multipart = require("connect-multiparty");
+const graphqlHTTP = require("express-graphql");
+const { buildSchema } = require("graphql");
+const cors = require("cors");
+const Pusher = require("pusher");
+const Multipart = require("connect-multiparty");
 const path = require("path");
-let mongoose = require("mongoose");
-let app = express();
+
+//User Auth
+const mongoose = require("mongoose");
+const passport = require("passport");
+const bodyParser = require("body-parser");
+const express = require("express");
+
+const users = require("./routes/users");
+
+const app = express();
 const PORT = process.env.PORT || 4000;
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/loann", {
-  useNewUrlParser: true
-});
+const db = require("./config/keys").mongoURI;
+
+//Connect to mongoDB
+mongoose.connect(db, { userNewUrlParser: true })
+  .then(() => console.log("mongoDB successfully conencted"))
+  .catch(err => console.log(err));
+
+//Passport middleware
+app.use(passport.initialize());
+
+//Passport config
+require("./config/passport")(passport);
+
+//Routes
+app.use("/api/users", users);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -138,5 +156,4 @@ app.post("/newpost", multipartMiddleware, (req, res) => {
 });
 
 //set application port
-
-app.listen(PORT);
+app.listen(PORT, () => console.log(`Server up and running on port ${PORT} !`));

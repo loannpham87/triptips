@@ -1,8 +1,8 @@
 {
-  "name": "server",
+  "name": "triptips-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "GraphQL server for tripstips",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

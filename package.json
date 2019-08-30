@@ -7,6 +7,8 @@
     "bootstrap": "^4.3.1",
     "graphql": "^14.5.3",
     "graphql-tag": "^2.10.1",
+    "http-server": "^0.11.1",
+    "pusher": "^2.2.2",
     "pusher-js": "^5.0.0",
     "react": "^16.9.0",
     "react-apollo": "^3.0.1",

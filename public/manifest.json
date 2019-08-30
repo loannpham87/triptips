@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  // "short_name": "React App",
+  "short_name": "TripTips",
+  "name": "Trips Tips App",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,7 +19,8 @@
       "sizes": "512x512"
     }	    
   ],
-  "start_url": ".",
+  // "start_url": ".",
+  "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import store from "./store";
+import ApolloClient from 'apollo-boost';
 
 import Home from "./pages/Home/home";
 import Login from "./pages/Login/login.js";
@@ -16,8 +17,9 @@ import Profile from "./pages/Profile/profile";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 import Navbar from "./components/NavBar/navbar";
-import Post from "./components/Post/post";
+import Wrapper from "./components/Wrapper/wrapper";
 import "./App.css";
+
 
 //Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -39,13 +41,13 @@ if (localStorage.jwtToken) {
   }
 }
 
-// const client = new ApolloClient({
-//         uri : "http://localhost:4000"
-//     })
+
+
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/graphql"
 });
+
 
 class App extends Component {
   constructor() {
@@ -89,51 +91,8 @@ class App extends Component {
 
 export default App;
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <Router>
-//         <div>
-//           <Navbar />
-//           <Header/>
-//           <Switch>
-//             <Route exact path="/" component={Home} />
-//             <Route exact path="/login" component={Login} />
-//             <Route exact path="/signup" component={Signup} />
-//             <Route exact path="/profile" component={Profile} />
-//           </Switch>
-//           <Footer />
-//         </div>
-//       </Router>
-//     );
-//   }
-// }
 
 
-// const App = () => {
-//   return (
-//     <Router>
-//     <div>
-//     <Navbar />
-//     <ApolloProvider client={client}>
-//       <div className="App">
-//         <Header />
-//         <Switch>
-//         <Route exact path="/" component={Home} />
-//         <Route exact path="/login" component={Login} />
-//         <Route exact path="/signup" component={Signup} />
-//         <Route exact path="/profile" component={Profile} />
-//       </Switch>
-//         <section className="App-main">
-//           <Post />
-//         </section>
-//       </div>
-//     </ApolloProvider>
-//     <Footer />
-//     </div>
-//   </Router>
-//   );
-// };
 
 
 

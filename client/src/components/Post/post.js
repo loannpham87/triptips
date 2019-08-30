@@ -1,8 +1,6 @@
 
     import React, { Component } from "react";
     import "./post.css";
-    // import { Query } from "react-apollo";
-    // import gql from "graphql-tag";
 
 
     class Post extends Component {
@@ -11,6 +9,7 @@
         const avatar = this.props.avatar;
         const image = this.props.image;
         const caption = this.props.caption;
+        
         return (
           <article className="Post" ref="Post">
             <header>
@@ -35,4 +34,5 @@
         );
       }
     }
+    
 export default Post;

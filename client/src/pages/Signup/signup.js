@@ -1,19 +1,13 @@
 import React, { Component } from "react";
 // import "bootstrap/dist/css.bootstrap.css";
 import "./signup.css";
+import Header from "../../components/Header/header";
+// import "../../components"
 
 function Signup() {
   return (
     <React.Fragment>
-      <div className="App">
-        <header className="main-header">
-          <img
-            src="./../../images/transparent-bkg.png"
-            className="logo"
-            alt="logo"
-          />
-        </header>
-      </div>
+      <Header />
 
       <div class="container">
         <div class="row">

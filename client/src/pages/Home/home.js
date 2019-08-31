@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
+import BrandStatement from "../../components/BrandStatement/brandStatement";
+import "../../components/BrandStatement/brandStatement.css";
 
 class Home extends Component {
   render() {
@@ -21,7 +23,7 @@ class Home extends Component {
             alt="logo"
           />
         </header>
-
+        <BrandStatement />
         <div className="btn-container">
           <div className="col s6">
             <Link

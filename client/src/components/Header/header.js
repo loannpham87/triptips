@@ -10,10 +10,6 @@ class Header extends Component {
           <header>
             <h1 className="header">TripTips</h1>
           </header>
-
-          <div className="brand-statement">
-            <p>Travel well. Travel better.</p>
-          </div>
         </nav>
       </React.Fragment>
     );

@@ -15,6 +15,7 @@ import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 import Navbar from "./components/NavBar/navbar";
 import Wrapper from "./components/Wrapper/wrapper";
+import BrandStatement from "./components/BrandStatement/brandStatement";
 import "./App.css";
 //Check for token to keep user logged in
 if (localStorage.jwtToken) {

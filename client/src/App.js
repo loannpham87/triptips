@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ApolloClient from 'apollo-boost';
 import Pusher from 'pusher-js';
-import ApolloClient from "apollo-boost";
-import Pusher from "pusher-js";
 import jwt_decode from "jwt-decode";
 import { Provider } from "react-redux";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import store from "./store";
+
+
 import Home from "./pages/Home/home";
 import Login from "./pages/Login/login.js";
 import Signup from "./pages/Signup/signup";

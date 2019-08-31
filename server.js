@@ -26,7 +26,9 @@ mongoose
   .connect(process.env.MONGODB_URI || "mongodb://localhost/triptips", {
     useCreateIndex: true,
     useNewUrlParser: true
-  });
+  })
+  .catch(err => console.log(err));
+
 //Passport middleware
 app.use(passport.initialize());
 

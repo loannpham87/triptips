@@ -8,6 +8,7 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import store from "./store";
 import Home from "./pages/Home/home";
+import Boards from "./pages/Boards/boards";
 import Login from "./pages/Login/login.js";
 import Signup from "./pages/Signup/signup";
 import Profile from "./pages/Profile/profile";
@@ -59,12 +60,12 @@ class App extends Component {
             <Wrapper>
               <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/boards" component={Boards} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/profile" component={Profile} />
               </Switch>
             </Wrapper>
-            <Footer />
           </div>
         </Router>
       </Provider>

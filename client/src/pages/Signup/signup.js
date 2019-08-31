@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 // import "bootstrap/dist/css.bootstrap.css";
 import "./signup.css";
+import Header from "../../components/Header/header";
+// import "../../components"
+import Logo from "../../components/Logo/logo";
+import "../../components/Logo/logo.css";
 
 function Signup() {
   return (
     <React.Fragment>
-      <div className="App">
-        <header className="main-header">
-          <img src="./../../images/transparent-bkg.png" className="logo" alt="logo" />
-        </header>
-      </div>
-
+      <Header />
+      <Logo />
       <div class="container">
         <div class="row">
           <div class="col">
@@ -39,40 +39,40 @@ function Signup() {
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                       <img
-                        src="../local-eats.jpg"
+                        src="./../../images/local-eats.jpg"
                         class="d-block w-100"
                         alt="local eats"
                         className="d-block"
                       />
                       <div class="carousel-caption d-none d-md-block">
-                        <h5>Discover local eats.</h5>
-                        <p>Check out the local food scene.</p>
+                        <h5>Check out the local food scene.</h5>
+                        <p>Discover local eats.</p>
                       </div>
                     </div>
 
                     <div class="carousel-item">
                       <img
-                        src="../culture.jpg"
+                        src="./../../images/culture.jpg"
                         class="d-block w-100"
                         alt="culture"
                         className="d-block"
                       />
                       <div class="carousel-caption d-none d-md-block">
                         <h5>Immerse yourself in culture.</h5>
-                        <p>Seek out historical sites.</p>
+                        <p>Seek out history.</p>
                       </div>
                     </div>
 
                     <div class="carousel-item">
                       <img
-                        src="../stay.jpg"
+                        src="./../../images/stay.jpg"
                         class="d-block w-100"
                         alt="stay"
                         className="d-block"
                       />
                       <div class="carousel-caption d-none d-md-block">
-                        <h5>Stay somewhere with a view.</h5>
-                        <p>That bucket list won't check itself.</p>
+                        <h5>That bucket list won't check itself.</h5>
+                        <p>Stay somewhere with a view.</p>
                       </div>
                     </div>
                   </div>
@@ -91,7 +91,6 @@ function Signup() {
                   href="#carouselExampleCaptions"
                   role="button"
                   data-slide="next"
-                  // onClick={carouselScroll}
                 >
                   <span class="carousel-control-next-icon" aria-hidden="true" />
                   <span class="sr-only">Next</span>

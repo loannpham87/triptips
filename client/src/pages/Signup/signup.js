@@ -43,8 +43,8 @@ function Signup() {
                         className="d-block"
                       />
                       <div class="carousel-caption d-none d-md-block">
-                        <h5>Discover local eats.</h5>
-                        <p>Check out the local food scene.</p>
+                        <h5>Check out the local food scene.</h5>
+                        <p>Discover local eats.</p>
                       </div>
                     </div>
 
@@ -57,7 +57,7 @@ function Signup() {
                       />
                       <div class="carousel-caption d-none d-md-block">
                         <h5>Immerse yourself in culture.</h5>
-                        <p>Seek out historical sites.</p>
+                        <p>Seek out history.</p>
                       </div>
                     </div>
 
@@ -69,8 +69,8 @@ function Signup() {
                         className="d-block"
                       />
                       <div class="carousel-caption d-none d-md-block">
-                        <h5>Stay somewhere with a view.</h5>
-                        <p>That bucket list won't check itself.</p>
+                        <h5>That bucket list won't check itself.</h5>
+                        <p>Stay somewhere with a view.</p>
                       </div>
                     </div>
                   </div>
@@ -89,7 +89,6 @@ function Signup() {
                   href="#carouselExampleCaptions"
                   role="button"
                   data-slide="next"
-                  // onClick={carouselScroll}
                 >
                   <span class="carousel-control-next-icon" aria-hidden="true" />
                   <span class="sr-only">Next</span>

@@ -2,6 +2,10 @@
   margin-bottom: 20px;
 }
 
+body {
+  background-color: #c6c8c3;
+}
+
 .carousel {
   display: block;
   margin-top: 200px;

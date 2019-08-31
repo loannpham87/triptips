@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./home.css";
 import BrandStatement from "../../components/BrandStatement/brandStatement";
 import "../../components/BrandStatement/brandStatement.css";
+import Logo from "../../components/Logo/logo";
+import "../../components/Logo/logo.css";
 
 class Home extends Component {
   render() {
@@ -15,14 +17,8 @@ class Home extends Component {
             alt="background"
           />
         </div>
+        <Logo />
 
-        <header className="main-header">
-          <img
-            src="./../../images/transparent-bkg.png"
-            className="logo"
-            alt="logo"
-          />
-        </header>
         <BrandStatement />
         <div className="btn-container">
           <div className="col s6">

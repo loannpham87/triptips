@@ -3,12 +3,14 @@ import React, { Component } from "react";
 import "./signup.css";
 import Header from "../../components/Header/header";
 // import "../../components"
+import Logo from "../../components/Logo/logo";
+import "../../components/Logo/logo.css";
 
 function Signup() {
   return (
     <React.Fragment>
       <Header />
-
+      <Logo />
       <div class="container">
         <div class="row">
           <div class="col">

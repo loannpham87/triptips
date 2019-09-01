@@ -5,6 +5,7 @@ import BrandStatement from "../../components/BrandStatement/brandStatement";
 import "../../components/BrandStatement/brandStatement.css";
 import Logo from "../../components/Logo/logo";
 import "../../components/Logo/logo.css";
+import Footer from "../../components/Footer/footer";
 
 class Home extends Component {
   render() {
@@ -39,6 +40,7 @@ class Home extends Component {
             </Link>
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }

@@ -9,6 +9,7 @@
   z-index: 1;
   margin-top: 0px;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 2;
   -webkit-transition: height 0.2s ease-in-out;

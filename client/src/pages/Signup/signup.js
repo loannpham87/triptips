@@ -5,6 +5,7 @@ import Header from "../../components/Header/header";
 // import "../../components"
 import Logo from "../../components/Logo/logo";
 import "../../components/Logo/logo.css";
+import Footer from "../../components/Footer/footer";
 
 function Signup() {
   return (

@@ -16,7 +16,7 @@ import Profile from "./pages/Profile/profile";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 import Navbar from "./components/NavBar/navbar";
-import Wrapper from "./components/Wrapper/wrapper";
+// import Wrapper from "./components/Wrapper/wrapper";
 import "./App.css";
 
 

@@ -1,3 +1,10 @@
+.container {
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: #c6c8c3;
+}
 
 .carousel {
   display: block;
@@ -6,17 +13,24 @@
   margin-right: auto;
   margin-bottom: 20px;
   right: 50;
-  background-color: rgb(201, 157, 37);
+  background-color: #c6c8c3;
+}
+
+.carousel-caption {
+  color: #c6c8c3;
+  font-weight: bolder;
+  text-shadow: 4px 4px 6px black;
+  font-size: 30px;
 }
 
 .d-block {
-  height: 500px;
+  height: 550px;
   margin-top: 0px;
   margin-bottom: 50px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 35%;
+  width: 550px;
 }
 
 .signup {
@@ -30,18 +44,26 @@
 }
 
 .signup-btn {
-  margin-top: 10px;
-  float: right;
+  background-color: #2f6690;
+  color: white;
+  text-shadow: 1px 1px 2px white;
+  font-size: 24px;
+  font-family: "Special Elite", cursive;
+  padding: 12px 24px;
+  border: none;
   cursor: pointer;
   border-radius: 5px;
-  padding: 12px 24px;
-  background-color: #555;
-  color: white;
-  font-family: "Special Elite", cursive;
+  margin-top: 10px;
+  text-decoration: none;
+  width: 200px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .signup-btn:hover {
   color: #555;
-  background-color: white;
+  background-color: #c6c8c3;
 }
 
+a:link {
+  color: #c6c8c3;
+}

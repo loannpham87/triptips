@@ -19,8 +19,14 @@ const PORT = process.env.PORT || 4000;
 const db = require("./config/keys").mongoURI;
 
 //Connect to mongoDB
-mongoose.connect(db, { userNewUrlParser: true })
-  .then(() => console.log("mongoDB successfully conencted"))
+mongoose
+  // .connect(db, { useNewUrlParser: true })
+  // .then(() => console.log("mongoDB successfully conencted"))
+  // .catch(err => console.log(err));
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/triptips", {
+    useCreateIndex: true,
+    useNewUrlParser: true
+  })
   .catch(err => console.log(err));
 
 //Passport middleware

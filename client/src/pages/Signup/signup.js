@@ -5,6 +5,12 @@ import { connect } from "react-redux";
 import { registerUser } from "./../../actions/authActions";
 import classnames from "classnames";
 import "./signup.css";
+import Header from "../../components/Header/header";
+// import "../../components"
+import Logo from "../../components/Logo/logo";
+import "../../components/Logo/logo.css";
+import Footer from "../../components/Footer/footer";
+
 
 class Signup extends Component {
   constructor() {
@@ -26,6 +32,7 @@ class Signup extends Component {
     // console.log(this.state);
     // console.log(this.props);
   }
+
 
   static getDerivedStateFromProps(nextProps) {
     console.log(nextProps);

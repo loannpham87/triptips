@@ -2,21 +2,22 @@
   margin-top: 0px;
 }
 
-.logo {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  height: 200px;
-  width: 200px;
-}
-
 .bkg-photo {
+  position: fixed;
   width: 100%;
   height: auto;
-  z-index: 0;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  margin: 0;
 }
 
+.bkg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
 
 .btn-container {
   top: 50%;
@@ -28,8 +29,9 @@
 .btn {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #555;
+  background-color: #2f6690;
   color: white;
+  text-shadow: 1px 1px 2px white;
   font-size: 24px;
   font-family: "Special Elite", cursive;
   padding: 24px 48px;
@@ -39,28 +41,30 @@
   margin: 10px;
   text-decoration: none;
   width: 450px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn:hover {
-  background-color: black;
+  background-color: #2f6690;
   text-decoration: none;
 }
 
 .dev-cred {
-  color: gray;
+  color: #2f6690;
   text-align: center;
   margin-bottom: 7px;
+  font-family: "Special Elite", cursive;
+  text-shadow: 1px 1px 2px black;
 }
 
 a:hover {
-  color: skyblue;
+  color: white;
   background-color: white;
   text-decoration: none;
 }
 
 a:visited {
-  color: gray;
-  background-color: black;
+  color: white;
+  /* background-color: black; */
   text-decoration: none;
 }
-

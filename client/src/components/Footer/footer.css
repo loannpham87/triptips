@@ -1,4 +1,10 @@
 footer {
-    margin-top: 10px;
-    margin-bottom: 7px;
-  }
+  margin-top: 10px;
+  margin-bottom: 7px;
+  position: fixed;
+  bottom: 5%;
+  right: 20%;
+  color: #3a7ca5;
+  font-weight: bolder;
+  font-size: 18px;
+}

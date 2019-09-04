@@ -30,7 +30,9 @@ router.get('/uploads', requireAuth, async (req, res, next) => {
     }
 });
 
-router.post('/uploadImage/', requireAuth, upload.single('photo'), (req, res, next) => {
+// router.post('/uploadImage/', requireAuth, upload.single('photo'), (req, res, next) => {
+router.post('/uploadImage/', upload.single('photo'), (req, res, next) => {
+
     cloudinary.v2.uploader.upload_stream({ resource_type: 'raw' }, async (error, result) => {
         if(error){
             console.log(err);
@@ -41,6 +43,7 @@ router.post('/uploadImage/', requireAuth, upload.single('photo'), (req, res, nex
             caption: 'Caption',
             imageUrl: result.url,
             image_id: result.public_id,
+            profilePic: 'https://www.vccircle.com/wp-content/uploads/2017/03/default-profile.png' ,
             userId: req.user._id
         })
 
@@ -53,22 +56,24 @@ router.post('/uploadImage/', requireAuth, upload.single('photo'), (req, res, nex
     }).end(req.file.buffer);
 });
 
-router.post('/uploadAvatar', requireAuth, (req, res) => {
-    cloudinary.v2.uploader.upload_stream({ resource_type: 'raw' }, async (error, result) => {
-        if(error){
-            console.log(err);
-        }
+// router.post('/uploadAvatar', requireAuth, (req, res) => {
+//     cloudinary.v2.uploader.upload_stream({ resource_type: 'raw' }, async (error, result) => {
+//         if(error){
+//             console.log(err);
+//         }
         
-        try {
-            const user = User.findByIdAndUpdate(req.user._id, { $set: { profilePic: result.url }})
-            res.send(user);
-        } catch(err){
-            res.send(500, { error: err });
-        }
-    }).end(req.file.buffer);
-})
+//         try {
+//             const user = User.findByIdAndUpdate(req.user._id, { $set: { profilePic: result.url }})
+//             res.send(user);
+//         } catch(err){
+//             res.send(500, { error: err });
+//         }
+//     }).end(req.file.buffer);
+// })
 
-router.delete('/deleteImage/:imageId', requireAuth, (req, res) => {
+// router.delete('/deleteImage/:imageId', requireAuth, (req, res) => {
+router.delete('/deleteImage/:imageId', (req, res) => {
+
     const { imageId } = req.params;
     console.log(imageId);
 

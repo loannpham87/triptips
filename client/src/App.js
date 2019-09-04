@@ -9,15 +9,6 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 import store from "./store";
 
-
-
-<<<<<<< HEAD
-import store from "./store";
-
-
-=======
-// import store from "./store";
->>>>>>> origin
 import Home from "./pages/Home/home";
 import Boards from "./pages/Boards/boards";
 import Login from "./pages/Login/login.js";

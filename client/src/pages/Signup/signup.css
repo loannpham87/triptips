@@ -8,7 +8,7 @@ body {
 
 .carousel {
   display: block;
-  margin-top: 200px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -69,14 +69,37 @@ a:link {
 }
 
 input{
-  margin: 15px;
-
+  /* margin: 10px; */
+  margin: 10px 10px 0 0;
+  border-radius: 0px;
 }
 
-button{
-  float:right;
+.signUpBtn{
+  /* float:right; */
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  /* margin: 0 0 -100px 0; */
+  position: relative;
+  /* left: -6.5%; */
+  /* left: 10%; */
 }
 
 .container{
   margin-top: 50px;
+}
+
+
+.signupForm{
+  float:right;
+}
+
+.input-field{
+  position: relative;
+  /* left: 10%; */
+}
+
+.s12{
+  position: relative;
+  left : -10%;
 }

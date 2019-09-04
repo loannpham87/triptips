@@ -8,22 +8,26 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 
-import store from "./store";
+// import store from "./store";
 import Home from "./pages/Home/home";
+<<<<<<< HEAD
+=======
+// import Boards from "./pages/Boards/boards";
+>>>>>>> origin
 import Login from "./pages/Login/login.js";
 import Signup from "./pages/Signup/signup";
 import Profile from "./pages/Profile/profile";
 import Header from "./components/Header/header";
-import Footer from "./components/Footer/footer";
-import Navbar from "./components/NavBar/navbar";
+// import Footer from "./components/Footer/footer";
+// import Navbar from "./components/NavBar/navbar";
 
 // import Wrapper from "./components/Wrapper/wrapper";
 import "./App.css";
 
 
 import Wrapper from "./components/Wrapper/wrapper";
-import BrandStatement from "./components/BrandStatement/brandStatement";
-import Logo from "./components/Logo/logo";
+// import BrandStatement from "./components/BrandStatement/brandStatement";
+// import Logo from "./components/Logo/logo";
 
 
 import "./App.css";
@@ -49,14 +53,14 @@ const client = new ApolloClient({
   uri: "http://localhost:4000/graphql"
 });
 class App extends Component {
-  constructor() {
-    super();
-    // connect to pusher
-    this.pusher = new Pusher("PUSHER_APP_KEY", {
-      cluster: "eu",
-      encrypted: true
-    });
-  }
+  // constructor() {
+  //   super();
+  //   // connect to pusher
+  //   this.pusher = new Pusher("PUSHER_APP_KEY", {
+  //     cluster: "eu",
+  //     encrypted: true
+  //   });
+  // }
   render() {
     return (
       <Provider store={store}>
@@ -67,6 +71,10 @@ class App extends Component {
             <Wrapper>
               <Switch>
                 <Route exact path="/" component={Home} />
+<<<<<<< HEAD
+=======
+                {/* <Route exact path="/boards" component={Boards} /> */}
+>>>>>>> origin
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/profile" component={Profile} />

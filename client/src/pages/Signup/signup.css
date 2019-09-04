@@ -67,3 +67,16 @@ body {
 a:link {
   color: #c6c8c3;
 }
+
+input{
+  margin: 15px;
+
+}
+
+button{
+  float:right;
+}
+
+.container{
+  margin-top: 50px;
+}

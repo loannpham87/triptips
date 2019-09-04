@@ -64,6 +64,10 @@ class Profile extends Component {
             <div>
               <Post />
             </div>
+
+            <button
+              onClick={this.onLogoutClick}
+              >Logout</button>
           </React.Fragment>
         );
   }

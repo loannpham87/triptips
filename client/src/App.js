@@ -74,6 +74,7 @@ class App extends Component {
                 <Route exact path="/profile" component={Profile} />
               </Switch>
             </Wrapper>
+            <Footer />
           </div>
         </Router>
       </Provider>

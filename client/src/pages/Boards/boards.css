@@ -1,7 +1,7 @@
 .container {
   position: relative;
   top: 250px;
-  left: -13%;
+  /* left: -13%; */
   outline: #034748 5px solid;
   box-shadow: 10px 10px 5px grey;
 }

@@ -15,7 +15,7 @@ import Login from "./pages/Login/login.js";
 import Signup from "./pages/Signup/signup";
 import Profile from "./pages/Profile/profile";
 import Header from "./components/Header/header";
-// import Footer from "./components/Footer/footer";
+import Footer from "./components/Footer/footer";
 import Navbar from "./components/NavBar/navbar";
 
 // import Wrapper from "./components/Wrapper/wrapper";

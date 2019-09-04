@@ -31,13 +31,15 @@ class Boards extends Component {
                   src="./../../images/havasu.jpg"
                   height="200px"
                   width="200px"
-                />
+                  alt=""
+                  />
 
                 <img
                   className="enlarge"
                   src="./../../images/havasu1.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -45,6 +47,7 @@ class Boards extends Component {
                   src="./../../images/havasu2.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -52,6 +55,7 @@ class Boards extends Component {
                   src="./../../images/havasu3.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -59,6 +63,7 @@ class Boards extends Component {
                   src="./../../images/havasu4.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -66,6 +71,7 @@ class Boards extends Component {
                   src="./../../images/havasu5.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -73,6 +79,7 @@ class Boards extends Component {
                   src="./../../images/havasu6.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -80,6 +87,7 @@ class Boards extends Component {
                   src="./../../images/havasu7.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -87,6 +95,7 @@ class Boards extends Component {
                   src="./../../images/havasu8.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -94,6 +103,7 @@ class Boards extends Component {
                   src="./../../images/havasu9.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -101,6 +111,7 @@ class Boards extends Component {
                   src="./../../images/havasu10.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -108,6 +119,7 @@ class Boards extends Component {
                   src="./../../images/havasu11.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
               </div>
             </div>
@@ -132,6 +144,7 @@ class Boards extends Component {
                   src="./../../images/olympic.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -139,6 +152,7 @@ class Boards extends Component {
                   src="./../../images/olympic1.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -146,6 +160,7 @@ class Boards extends Component {
                   src="./../../images/olympic2.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -153,6 +168,7 @@ class Boards extends Component {
                   src="./../../images/olympic3.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -160,6 +176,7 @@ class Boards extends Component {
                   src="./../../images/olympic4.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -167,6 +184,7 @@ class Boards extends Component {
                   src="./../../images/olympic5.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -174,6 +192,7 @@ class Boards extends Component {
                   src="./../../images/olympic6.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -181,6 +200,7 @@ class Boards extends Component {
                   src="./../../images/olympic7.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -188,6 +208,7 @@ class Boards extends Component {
                   src="./../../images/olympic8.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -195,6 +216,7 @@ class Boards extends Component {
                   src="./../../images/olympic9.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -202,6 +224,7 @@ class Boards extends Component {
                   src="./../../images/olympic10.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -209,6 +232,7 @@ class Boards extends Component {
                   src="./../../images/olympic11.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -216,6 +240,7 @@ class Boards extends Component {
                   src="./../../images/olympic12.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
               </div>
             </div>
@@ -240,6 +265,7 @@ class Boards extends Component {
                   src="./../../images/seattle.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -247,6 +273,7 @@ class Boards extends Component {
                   src="./../../images/seattle1.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -254,6 +281,7 @@ class Boards extends Component {
                   src="./../../images/seattle2.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -261,6 +289,7 @@ class Boards extends Component {
                   src="./../../images/seattle3.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -268,6 +297,7 @@ class Boards extends Component {
                   src="./../../images/seattle4.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -275,6 +305,7 @@ class Boards extends Component {
                   src="./../../images/seattle5.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -282,6 +313,7 @@ class Boards extends Component {
                   src="./../../images/seattle6.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -289,6 +321,7 @@ class Boards extends Component {
                   src="./../../images/seattle7.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -296,6 +329,7 @@ class Boards extends Component {
                   src="./../../images/seattle8.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -303,6 +337,7 @@ class Boards extends Component {
                   src="./../../images/seattle9.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -310,6 +345,7 @@ class Boards extends Component {
                   src="./../../images/seattle10.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -317,6 +353,7 @@ class Boards extends Component {
                   src="./../../images/seattle11.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
 
                 <img
@@ -324,6 +361,7 @@ class Boards extends Component {
                   src="./../../images/seattle12.jpg"
                   height="200px"
                   width="200px"
+                  alt=""
                 />
               </div>
             </div>

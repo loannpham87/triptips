@@ -7,19 +7,16 @@ import { Provider } from "react-redux";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 
+import store from "./store";
 
-// import store from "./store";
 import Home from "./pages/Home/home";
-<<<<<<< HEAD
-=======
-// import Boards from "./pages/Boards/boards";
->>>>>>> origin
+import Boards from "./pages/Boards/boards";
 import Login from "./pages/Login/login.js";
 import Signup from "./pages/Signup/signup";
 import Profile from "./pages/Profile/profile";
 import Header from "./components/Header/header";
 // import Footer from "./components/Footer/footer";
-// import Navbar from "./components/NavBar/navbar";
+import Navbar from "./components/NavBar/navbar";
 
 // import Wrapper from "./components/Wrapper/wrapper";
 import "./App.css";
@@ -66,15 +63,12 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            {/* <Navbar /> */}
+            <Navbar />
             <Header />
             <Wrapper>
               <Switch>
                 <Route exact path="/" component={Home} />
-<<<<<<< HEAD
-=======
-                {/* <Route exact path="/boards" component={Boards} /> */}
->>>>>>> origin
+                <Route exact path="/boards" component={Boards} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/profile" component={Profile} />

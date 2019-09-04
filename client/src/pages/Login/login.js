@@ -18,13 +18,25 @@ class Login extends Component {
 
   componentDidMount() {
     //If logged in and user navigates to Login page, should redirect them to the profile page
-    // if(this.props.auth.isAuthenticated) {
-    //   this.props.history.push("/profile");
-    // }
+    if(this.props.auth.isAuthenticated) {
+      this.props.history.push("/profile");
+    }
   }
 
-  getDerivedStateFromProps(nextProps) {
-    if(nextProps.auth.isAuthenticated) {
+  // static getDerivedStateFromProps(nextProps) {
+  //   if(nextProps.auth.isAuthenticated) {
+  //     this.props.history.push("/profile");
+  //   }
+
+  //   if (nextProps.errors) {
+  //     this.setState({
+  //       errors: nextProps.errors
+  //     });
+  //   }
+  // }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.auth.isAuthenticaed) {
       this.props.history.push("/profile");
     }
 
@@ -36,10 +48,7 @@ class Login extends Component {
   }
 
   onChange = event => {
-    const {name, value} = event.target;
-    this.setState({
-      [name]: value
-    });
+    this.setState({ [event.target.id]: event.target.value });
   }
 
   onSubmit = event => {
@@ -50,7 +59,9 @@ class Login extends Component {
       password: this.state.password
     };
 
-    this.props.loginUser(userData);
+    // console.log(userData);
+
+    this.props.loginUser(userData, this.props.history);
   }
 
   render(){
@@ -159,6 +170,7 @@ class Login extends Component {
                     letterSpacing: "1.5px",
                     marginTop: "1rem"
                   }}
+                  onSubmit={this.onSubmit}
                   type="submit"
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                 >

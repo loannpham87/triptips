@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import  { logoutUser } from "./../../actions/authActions";
 import "./profile.css";
 import Post from "../../components/Post/post";
 
@@ -31,8 +34,14 @@ import Post from "../../components/Post/post";
 // }
 
 class Profile extends Component { 
+  onLogoutClick  = event => {
+    event.preventDefault();
+    this.props.logoutUser();
+  }
   
   render() {
+    const { user } = this.props.auth;
+    console.log(user);
     return (
           <React.Fragment>
             <div className="App">
@@ -44,8 +53,8 @@ class Profile extends Component {
                 />
               </header>
               <div>
-                TEST
-                {/* {props.location.key} */}
+                {/* { this.state} */}
+                {user.name}
               </div>
               {/* <div>
                 <Post/>
@@ -59,5 +68,18 @@ class Profile extends Component {
         );
   }
 }
+Profile.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
 
-export default Profile;
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+    mapStateToProps,
+    { logoutUser }
+)(Profile);
+
+// export default Profile;

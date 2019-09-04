@@ -5,11 +5,11 @@ import { connect } from "react-redux";
 import { registerUser } from "./../../actions/authActions";
 import classnames from "classnames";
 import "./signup.css";
-import Header from "../../components/Header/header";
+// import Header from "../../components/Header/header";
 // import "../../components"
-import Logo from "../../components/Logo/logo";
+// import Logo from "../../components/Logo/logo";
 import "../../components/Logo/logo.css";
-import Footer from "../../components/Footer/footer";
+// import Footer from ".  ./../components/Footer/footer";
 
 
 class Signup extends Component {
@@ -34,18 +34,12 @@ class Signup extends Component {
   }
 
 
-  static getDerivedStateFromProps(nextProps) {
-    console.log(nextProps);
-    // this.setState({ name: nextProps.auth.user.name });
-    // this.setState({ email: nextProps.auth.user.email });
-    
-    // console.log(this.state);
-    // if (nextProps.errors) {
-    //   this.setState({
-    //     errors: nextProps.errors
-    //   });
-    // }
-    return "test";
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
   }
 
   onChange = event => {

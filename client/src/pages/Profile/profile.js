@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import  { logoutUser } from "./../../actions/authActions";
+import { Link } from "react-router-dom";
 import "./profile.css";
 import Post from "../../components/Post/post";
 
@@ -36,7 +37,10 @@ import Post from "../../components/Post/post";
 class Profile extends Component { 
   onLogoutClick  = event => {
     event.preventDefault();
+    // this.props.logoutUser();
+
     this.props.logoutUser();
+
   }
   
   render() {
@@ -65,9 +69,14 @@ class Profile extends Component {
               <Post />
             </div>
 
-            <button
+            {/* <button
               onClick={this.onLogoutClick}
-              >Logout</button>
+              >Logout</button> */}
+              <Link
+                to="/login"
+                className="btn btn-large waves-effect waves-light hoverable accent-3"
+                onClick={this.onLogoutClick}
+                >Logout</Link>
           </React.Fragment>
         );
   }

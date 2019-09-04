@@ -7,6 +7,9 @@ import { Provider } from "react-redux";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 
+import store from "./store";
+
+
 
 import store from "./store";
 import Home from "./pages/Home/home";
@@ -16,9 +19,15 @@ import Profile from "./pages/Profile/profile";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 import Navbar from "./components/NavBar/navbar";
+
+// import Wrapper from "./components/Wrapper/wrapper";
+import "./App.css";
+
+
 import Wrapper from "./components/Wrapper/wrapper";
 import BrandStatement from "./components/BrandStatement/brandStatement";
 import Logo from "./components/Logo/logo";
+
 
 import "./App.css";
 //Check for token to keep user logged in

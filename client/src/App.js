@@ -9,9 +9,6 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 import store from "./store";
 
-
-
-// import store from "./store";
 import Home from "./pages/Home/home";
 import Boards from "./pages/Boards/boards";
 import Login from "./pages/Login/login.js";
@@ -77,6 +74,7 @@ class App extends Component {
                 <Route exact path="/profile" component={Profile} />
               </Switch>
             </Wrapper>
+            <Footer />
           </div>
         </Router>
       </Provider>

@@ -1,9 +1,15 @@
 const graphqlHTTP = require("express-graphql");
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
 const { buildSchema } = require("graphql");
 const cors = require("cors");
 const Pusher = require("pusher");
 const Multipart = require("connect-multiparty");
 const path = require("path");
+const keys = require('./config/keys');
+
+require('./models/User');
+require('./models/Post');
 
 //User Auth
 const mongoose = require("mongoose");
@@ -11,10 +17,18 @@ const passport = require("passport");
 const bodyParser = require("body-parser");
 const express = require("express");
 
+//Routes
 const users = require("./routes/users");
+const index = require('./routes/index');
+const auth = require('./routes/auth');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+
+
+console.log(__dirname);
+app.use(cors());
+
 
 const db = require("./config/keys").mongoURI;
 
@@ -33,11 +47,30 @@ mongoose.connect(db, { useNewUrlParser: true })
 //   .catch(err => console.log(err));
 
 app.use(passport.initialize());
-
 require("./config/passport")(passport);
 
-app.use("/api/users", users);
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 
+
+app.use("/api/users", users);
+app.use('/api/auth', auth);
+app.use('/api', index);
+
+if(process.env.NODE_ENV === 'production'){
+	app.use(express.static('client/build'));
+	const path = require('path');
+	app.get('*', (req, res) => {
+		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+	})
+}
+
+
+app.listen(PORT, () => console.log(`Server up and running on port ${PORT} !`));
+
+module.exports = app;
 
 // //Connect to mongoDB
 // mongoose
@@ -183,4 +216,3 @@ app.use("/api/users", users);
 // });
 
 //set application port
-app.listen(PORT, () => console.log(`Server up and running on port ${PORT} !`));

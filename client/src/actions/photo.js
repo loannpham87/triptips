@@ -7,7 +7,7 @@ import {
 
 export const uploadPhoto = (formData, userId) => async dispatch => {
     try {
-        const upload = await axios.post(`/api/user/uploadImage/`, formData,
+        const upload = await axios.post(`/api/users/uploadImage/`, formData,
         { headers: { Authorization: localStorage.getItem('token') } });
         console.log(upload);
         dispatch({ type: UPLOAD_SUCCESS, payload: upload });
@@ -18,7 +18,7 @@ export const uploadPhoto = (formData, userId) => async dispatch => {
 
 export const fetchPhotos = () => async dispatch => {
     try {
-        const photos = await axios.get(`/api/user/uploads`,
+        const photos = await axios.get(`/api/users/uploads`,
         { headers: { Authorization: localStorage.getItem('token') } });
         dispatch({ type: FETCH_PHOTOS, payload: photos });
     } catch(err){

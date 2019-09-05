@@ -30,6 +30,8 @@
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.0",
+    "redux-action-binder": "^1.0.5",
+    "semantic-ui-react": "^0.88.0",
     "validator": "^11.1.0"
   },
   "scripts": {

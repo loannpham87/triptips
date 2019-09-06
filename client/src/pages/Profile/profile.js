@@ -35,9 +35,9 @@ class Profile extends Component {
         <Container >
             <Posts/>
 
-            <div>
+            {/* <div>
                 <h1>{user.name}</h1>
-              </div>
+              </div> */}
 
             <button
               onClick={this.onLogoutClick}

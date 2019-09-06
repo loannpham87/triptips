@@ -51,6 +51,38 @@ class Login extends Component {
     }
   }
 
+  // componentDidUpdate(nextProps) {
+  //   if(nextProps.auth.isAuthenticated) {
+  //     console.log("working");
+  //     this.props.history.push("/profile");
+  //   }
+
+  //   if (nextProps.errors) {
+  //     this.setState({
+  //       errors: nextProps.errors
+  //     });
+  //   }
+  // }
+
+  // static getDerivedStateFromProps(nextProps) {
+  //   if (nextProps.auth.isAuthenticaed) {
+  //     console.log("working");
+  //     const history = "/profile";
+  //     // this.props.history.push("/profile");
+  //     return history;
+  //   }
+
+  //   if (nextProps.errors) {
+  //     // this.setState({
+  //     //   errors: nextProps.errors
+  //     // });
+  //     const { errors } = nextProps.errors;
+  //     return errors;
+  //   }
+
+  //   return nextProps;
+  // }
+
   onChange = event => {
     this.setState({ [event.target.id]: event.target.value });
   };

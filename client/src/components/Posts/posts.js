@@ -12,9 +12,11 @@ import { bindActionCreators } from 'redux';
 
 class Posts extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.userActions.fetchUser();
     this.props.photoActions.fetchPhotos();
+    // console.log(this.state);
+    // console.log(props);
 }
 
 componentWillReceiveProps(nextProps) {
@@ -41,6 +43,7 @@ renderFeed() {
 }
 
 render() {
+    // console.log(props);
     return (
         <Grid columns={2} container divided stackable>
             <Grid.Row>
@@ -52,6 +55,8 @@ render() {
                         <div>
                             <Image src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' avatar />
                             <span>Username</span>
+                            {/* { this.props.auth.name } */}
+                            {/* {props.name} */}
                         </div>
                     </Segment>
                     <Segment>

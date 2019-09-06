@@ -11,33 +11,33 @@ import * as actions from '..//..//actions/authActions';
 class Navbar extends Component {
   renderAuthLinks() {
     // if(this.props.authenticated){
-      return (
-        [<Menu.Item key={1} position='right'>
-          <Input className='icon' icon='search' placeholder='Search...' />
-        </Menu.Item>,
+    return (
+      [<Menu.Item key={1} position='right'>
+        <Input className='icon' icon='search' placeholder='Search...' />
+      </Menu.Item>,
 
-        
-          <Menu.Item key={2}>
-            <Link to='/post'>
-            <Icon color='black' size='large' name='images' />
-            </Link>
-          </Menu.Item>,
 
-        <Menu.Item key={3}>
-          <Link to='/explore'>
-            <Icon color='black' size='large' name='compass' />
-          </Link>
-        </Menu.Item>,
+      <Menu.Item key={2}>
+        <Link to='/post'>
+          <Icon color='black' size='large' name='images' />
+        </Link>
+      </Menu.Item>,
 
-        <Menu.Item key={4}>
-          <Icon color='black' size='large' name='heart outline' />
-        </Menu.Item>,
+      <Menu.Item key={3}>
+        <Link to='/explore'>
+          <Icon color='black' size='large' name='compass' />
+        </Link>
+      </Menu.Item>,
 
-          <Menu.Item key={5} onClick={() => this.props.signOut()}>
-            Sign Out
-          </Menu.Item>
-          ]
-      )
+      <Menu.Item key={4}>
+        <Icon color='black' size='large' name='heart outline' />
+      </Menu.Item>,
+
+      <Menu.Item key={5} onClick={() => this.props.signOut()}>
+        Sign Out
+      </Menu.Item>
+      ]
+    )
     // }
   }
 
@@ -50,7 +50,7 @@ class Navbar extends Component {
           </Menu.Item>
         </Link>
 
-      {this.renderAuthLinks()}
+        {this.renderAuthLinks()}
 
       </Menu>
     )

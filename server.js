@@ -20,7 +20,7 @@ const express = require("express");
 //Routes
 const users = require("./routes/users");
 const index = require('./routes/index');
-const auth = require('./routes/auth');
+// const auth = require('./routes/auth'); //Creating error
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -56,7 +56,7 @@ app.use(cookieParser());
 
 
 app.use("/api/users", users);
-app.use('/api/auth', auth);
+// app.use('/api/auth', auth); //Creating error
 app.use('/api', index);
 
 if(process.env.NODE_ENV === 'production'){

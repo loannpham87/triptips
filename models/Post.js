@@ -24,7 +24,7 @@ const postSchema = new Schema({
     },
     userId: Schema.Types.ObjectId,
     followers: [Schema.Types.ObjectId],
-	following: [Schema.Types.ObjectId]
+	following: [Schema.Types.ObjectId],
     date: {
         type: Date,
         default: Date.now

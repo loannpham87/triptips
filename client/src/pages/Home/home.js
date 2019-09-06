@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import "./home.css";
 import BrandStatement from "../../components/BrandStatement/brandStatement";
 import "../../components/BrandStatement/brandStatement.css";
-import Logo from "../../components/Logo/logo";
+// import Logo from "../../components/Logo/logo";
 import "../../components/Logo/logo.css";
 import Footer from "../../components/Footer/footer";
+import Header from "../../components/Header/header";
 
 class Home extends Component {
   render() {
@@ -18,7 +19,7 @@ class Home extends Component {
             alt="background"
           />
         </div>
-        <Logo />
+        <Header/>
 
         <BrandStatement />
         <div className="btn-container">

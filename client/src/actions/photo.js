@@ -28,7 +28,7 @@ export const fetchPhotos = () => async dispatch => {
 
 export const deletePhoto = (imageId) => async dispatch => {
     try {
-        const deleteImage = await axios.delete(`/api/user/deleteImage/${imageId}`,
+        const deleteImage = await axios.delete(`/api/users/deleteImage/${imageId}`,
         { headers: { Authorization: localStorage.getItem('token') } });
         dispatch({ type: DELETE_PHOTO, payload: deleteImage });
     } catch(err){

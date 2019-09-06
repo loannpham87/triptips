@@ -1,100 +1,99 @@
 import React, {Component} from "react";
 import "./posts.css";
-import gql from "graphql-tag";
-import Post from "../Post/post";
-import Notifier from "../Notifier/notifier";
+// import gql from "graphql-tag";
+// import Post from "../Post/post";
+// import Notifier from "../Notifier/notifier";
+import { Grid, Segment, Card, Image, List } from 'semantic-ui-react';
+import * as photoActions from '../../actions/photo';
+import * as userActions from '..//..//actions/users';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 
 class Posts extends Component {
-  constructor() {
-    super();
-    this.state = {
-      posts: []
-    };
-    this.offline = !navigator.onLine;
-  }
-  componentDidMount() {
-    // request permission
-    Notification.requestPermission();
 
-    if (this.offline) {
-      this.setState({ posts: JSON.parse(localStorage.getItem("posts")) });
+  componentWillMount() {
+    this.props.userActions.fetchUser();
+    this.props.photoActions.fetchPhotos();
+}
+
+componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+}
+
+renderFeed() {
+    if(this.props.photos && this.props.user){
+        return this.props.photos.map(photo =>
+            <Card key={photo._id} style={{ width: '100%' }}>
+                <Image style={{ width: '100%', height: '500px' }} src={photo.imageUrl} />
+                <Card.Content>
+                    <Card.Header as='h2'>
+                        <Image src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' avatar />
+                        <span>{this.props.user.username}</span>
+                    </Card.Header>
+                    <Card.Description>{photo.caption}</Card.Description>
+                </Card.Content>
+            </Card>
+    )
     } else {
-      // fetch the initial posts
-      this.props.apollo_client
-        .query({
-          query: gql`
-            {
-              posts(user_id: "a") {
-                id
-                user {
-                  nickname
-                  avatar
-                }
-                image
-                caption
-              }
-            }
-          `
-        })
-        .then(response => {
-          this.setState({ posts: response.data.posts });
-          localStorage.setItem("posts", JSON.stringify(response.data.posts));
-        });
+        return <div>Loading...</div>
     }
-    //  subscribe to posts channel
-    this.posts_channel = this.props.pusher.subscribe("posts-channel");
+}
 
-    // listen for a new post
-    this.posts_channel.bind(
-      "new-post",
-      data => {
-        this.setState({ posts: this.state.posts.concat(data.post) });
-
-        // check for notifications
-        if (Notification.permission === "granted") {
-          try {
-            // notify user of new post
-            let notification = new Notification("Pusher Instagram Clone", {
-              body: `New post from ${data.post.user.nickname}`,
-              icon: "https://i.imgur.com/44Z37E8.jpg",
-              image: `${data.post.image}`
-            });
-
-            notification.onclick = function(event) {
-              window.open("http://localhost:3000", "_blank");
-            };
-          } catch (e) {
-            console.log("Error displaying notification");
-          }
-        }
-      },
-      this
-    );
-  }
-
-  render() {
-    const notify = this.offline ? <Notifier data="triptips: Offline Mode" /> : <span />;
+render() {
     return (
-      <div>
-        {notify}
-        <div className="Posts">
-          {this.state.posts
-            .slice(0)
-            .reverse()
-            .map(post => (
-              <Post
-                nickname={post.user.nickname}
-                avatar={post.user.avatar}
-                image={post.image}
-                caption={post.caption}
-                key={post.id}
-              />
-            ))}
-        </div>
-      </div>
-    );
+        <Grid columns={2} container divided stackable>
+            <Grid.Row>
+                <Grid.Column width={10}>
+                    {this.renderFeed()}
+                </Grid.Column>
+                <Grid.Column width={6}>
+                    <Segment>
+                        <div>
+                            <Image src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' avatar />
+                            <span>Username</span>
+                        </div>
+                    </Segment>
+                    <Segment>
+                        <List animated verticalAlign='middle'>
+                            <List.Item>
+                                <Image avatar src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' />
+                                <List.Content>
+                                    <List.Header>Helen</List.Header>
+                                </List.Content>
+                            </List.Item>
+                            <List.Item>
+                                <Image avatar src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' />
+                                <List.Content>
+                                    <List.Header>Christian</List.Header>
+                                </List.Content>
+                            </List.Item>
+                            <List.Item>
+                                <Image avatar src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' />
+                                <List.Content>
+                                    <List.Header>Daniel</List.Header>
+                                </List.Content>
+                            </List.Item>
+                        </List>
+                    </Segment>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
+    )
+}
+}
+function mapStateToProps(state) {
+  return {
+      user: state.user.user,
+      photos: state.photos.photos
   }
 }
 
-export default Posts;
+function mapDispatchToProps(dispatch) {
+  return {
+      userActions: bindActionCreators(userActions, dispatch),
+      photoActions: bindActionCreators(photoActions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Posts);

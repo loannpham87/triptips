@@ -6,11 +6,11 @@ import * as actions from '..//..//actions/authActions';
 
 // import "./navbar.css";
 
-const icons = ['user outline', 'heart outline', 'compass'];
+// const icons = ['images', 'heart outline', 'compass'];
 
-class Nav extends Component {
+class Navbar extends Component {
   renderAuthLinks() {
-    if(this.props.authenticated){
+    // if(this.props.authenticated){
       return (
         [<Menu.Item key={1} position='right'>
           <Input className='icon' icon='search' placeholder='Search...' />
@@ -18,8 +18,8 @@ class Nav extends Component {
 
         
           <Menu.Item key={2}>
-            <Link to='/profile'>
-            <Icon color='black' size='large' name='user outline' />
+            <Link to='/post'>
+            <Icon color='black' size='large' name='images' />
             </Link>
           </Menu.Item>,
 
@@ -28,23 +28,25 @@ class Nav extends Component {
             <Icon color='black' size='large' name='compass' />
           </Link>
         </Menu.Item>,
+
         <Menu.Item key={4}>
           <Icon color='black' size='large' name='heart outline' />
         </Menu.Item>,
 
           <Menu.Item key={5} onClick={() => this.props.signOut()}>
             Sign Out
-          </Menu.Item>]
+          </Menu.Item>
+          ]
       )
-    }
+    // }
   }
 
   render() {
     return (
-      <Menu style={{ height: '70px' }}>
+      <Menu style={{ height: '70px', display: "flex", margin: "150px 10px 0px 10px" }}>
         <Link to='/'>
           <Menu.Item>
-            <Image size='mini' src={'https://seeklogo.com/images/I/instagram-new-2016-glyph-logo-84CB825424-seeklogo.com.png'} />
+            <Image size='mini' src={'https://i.imgur.com/J9Dq2im.png?2'} />
           </Menu.Item>
         </Link>
 
@@ -61,7 +63,7 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, actions)(Nav);
+export default connect(mapStateToProps, actions)(Navbar);
 
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item

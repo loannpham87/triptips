@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ApolloClient from 'apollo-boost';
-import Pusher from 'pusher-js';
+// import ApolloClient from 'apollo-boost';
 import jwt_decode from "jwt-decode";
 import { Provider } from "react-redux";
 import setAuthToken from "./utils/setAuthToken";
@@ -10,24 +9,15 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import store from "./store";
 
 import Home from "./pages/Home/home";
-import Boards from "./pages/Boards/boards";
+// import Boards from "./pages/Boards/boards";
 import Login from "./pages/Login/login.js";
 import Signup from "./pages/Signup/signup";
 import Profile from "./pages/Profile/profile";
-import Header from "./components/Header/header";
-import Footer from "./components/Footer/footer";
-// import Navbar from "./components/NavBar/navbar";
-
-// import Wrapper from "./components/Wrapper/wrapper";
-import "./App.css";
-
-
-import Wrapper from "./components/Wrapper/wrapper";
-// import BrandStatement from "./components/BrandStatement/brandStatement";
-// import Logo from "./components/Logo/logo";
-
+import Post from "./pages/Post/post";
 
 import "./App.css";
+
+
 //Check for token to keep user logged in
 if (localStorage.jwtToken) {
   //Set auth token header auth
@@ -46,9 +36,9 @@ if (localStorage.jwtToken) {
     window.location.href = "./login";
   }
 }
-const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql"
-});
+// const client = new ApolloClient({
+//   uri: "http://localhost:4000/graphql"
+// });
 class App extends Component {
   // constructor() {
   //   super();
@@ -63,18 +53,15 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            {/* <Navbar /> */}
-            <Header />
-            <Wrapper>
               <Switch>
+                {/* <Navbar/> */}
                 <Route exact path="/" component={Home} />
-                <Route exact path="/boards" component={Boards} />
+                {/* <Route exact path="/boards" component={Boards} /> */}
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/profile" component={Profile} />
+                <Route exact Post="/post" component={Post} />
               </Switch>
-            </Wrapper>
-            <Footer />
           </div>
         </Router>
       </Provider>

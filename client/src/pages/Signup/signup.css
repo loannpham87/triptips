@@ -1,5 +1,7 @@
-.container {
+.container-carousel {
   margin-bottom: 20px;
+  position: absolute;
+  left: 25%;
 }
 
 body {
@@ -13,7 +15,10 @@ body {
   margin-right: auto;
   margin-bottom: 20px;
   right: 50;
+  top: 29%;
   background-color: #c6c8c3;
+  width: 550px;
+  height: 550px;
 }
 
 .carousel-caption {
@@ -33,7 +38,7 @@ body {
   width: 550px;
 }
 
-.signup {
+/* .signup {
   display: block;
   position: absolute;
   float: right;
@@ -41,9 +46,28 @@ body {
   bottom: 0;
   right: 0;
   margin-bottom: 50px;
-}
+} */
 
 .signup-btn {
+  background-color: #2f6690;
+  color: white;
+  text-shadow: 1px 1px 2px white;
+  font-size: 24px;
+  font-family: "Special Elite", cursive;
+  padding: 12px 24px;
+  border: none;
+  position: absolute;
+  right: -200;
+  top: 75px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  width: 200px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.signUpBtn .waves-effect {
   background-color: #2f6690;
   color: white;
   text-shadow: 1px 1px 2px white;
@@ -68,38 +92,47 @@ a:link {
   color: #c6c8c3;
 }
 
-input{
+input {
   /* margin: 10px; */
   margin: 10px 10px 0 0;
   border-radius: 0px;
 }
 
-.signUpBtn{
+.signUpBtn {
   /* float:right; */
   width: 200px;
   height: 50px;
   padding: 0;
   /* margin: 0 0 -100px 0; */
   position: relative;
-  /* left: -6.5%; */
-  /* left: 10%; */
+  left: -20%;
 }
 
-.container{
+.container {
   margin-top: 50px;
 }
 
-
-.signupForm{
-  float:right;
+.signupForm {
+  float: right;
 }
 
-.input-field{
+.input-field {
   position: relative;
   /* left: 10%; */
 }
 
-.s12{
+/* .s12 {
   position: relative;
-  left : -10%;
+  left: -10%;
+} */
+
+.formGroup {
+  position: relative;
+  right: -20%;
+  top: 45%;
+}
+
+.label {
+  font-family: "Special Elite", cursive;
+  font-size: 24px;
 }

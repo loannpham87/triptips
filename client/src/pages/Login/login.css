@@ -14,10 +14,6 @@
   margin-right: auto;
 }
 
-.bkg {
-  background-color: black;
-}
-
 .login-btn {
   background-color: #555;
   color: white;
@@ -29,8 +25,6 @@
   border-radius: 5px;
   margin: 10px;
   text-decoration: none;
-  width: 200px;
-  
 }
 
 .login-btn:hover {
@@ -56,6 +50,23 @@ a:visited {
   text-decoration: none;
 }
 
-button{
-  float:right;
+button {
+  float: right;
+}
+
+.bkg-photo {
+  /* display: block; */
+  left: 182%;
+  /* right: 30%; */
+  position: relative;
+  /* width: 50%; */
+}
+
+.container {
+  position: relative;
+  right: -15%;
+  /* top: 70%; */
+  top: 300px;
+  font-family: "Special Elite", cursive;
+  font-size: 22px;
 }

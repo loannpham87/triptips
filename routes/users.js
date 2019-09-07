@@ -1,17 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
-
-const mongoose = require('mongoose');
-// const User = mongoose.model('User'); //Creating error
-const Post = mongoose.model('Post');
-
-const multer = require('multer');
-
-
 const jwt = require("jsonwebtoken");
 const keys = require("./../config/keys");
-const passport = require("passport");
 
 //Load Input validation
 const validateRegisterInput = require("./../validation/register");
@@ -110,18 +101,5 @@ router.post("/login", (req, res) => {
         });
     });
 });
-
-//Amanda Added
-//Creating error
-// router.get('/currentUser', requireAuth, (req, res, next) => {
-// 	res.json({
-//         id: user.id,
-//         name: user.name
-        
-//     })
-    
-//     console.log(Ughhhhhhh);
-// })
-//Amanda's
 
 module.exports = router;

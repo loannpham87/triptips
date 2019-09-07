@@ -141,9 +141,8 @@ class Login extends Component {
                       right: "67%",
                       top: "50px"
                     }}
-                    onSubmit={this.onSubmit}
+                    
                     type="submit"
-                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                   >
                     Login
                   </button>

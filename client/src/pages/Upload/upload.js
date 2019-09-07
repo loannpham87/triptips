@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { uploadPost } from "./../actions/postAction";
+import { uploadPost } from "./../../actions/postAction";
 
 class Upload extends Component {
     constructor() {

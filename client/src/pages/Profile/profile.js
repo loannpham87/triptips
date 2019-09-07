@@ -1,12 +1,12 @@
 import React, { Component } from "react";
+import axios from "axios";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import  { logoutUser } from "./../../actions/authActions";
 import { Link } from "react-router-dom";
 import "./profile.css";
-import Posts from "../../components/Posts/posts";
-import Navbar from "..//..//components/NavBar/navbar";
-import Header from "..//..//components/Header/header";
+import Navbar from "../../components/NavBar/navbar";
+import Header from "../../components/Header/header";
 import {Container} from "semantic-ui-react";
 // import 'semantic-ui-css/semantic.min.css';
 
@@ -49,7 +49,6 @@ class Profile extends Component {
       <Navbar/>
 
         <Container >
-            <Posts/>
 
             {/* <div>
                 <h1>{user.name}</h1>

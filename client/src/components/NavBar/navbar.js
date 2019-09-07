@@ -19,7 +19,7 @@ class Navbar extends Component {
 
       <Menu.Item key={2}>
         <Link to='/post'>
-          <Icon color='black' size='large' name='images' />
+          <Icon color='black' size='large' name='image' />
         </Link>
       </Menu.Item>,
 

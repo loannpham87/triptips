@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { loginUser } from "./../../actions/authActions";
 import classnames from "classnames";
 import "./login.css";
-import { relative } from "path";
 import Logo from "../../components/Logo/logo";
 import "../../components/Logo/logo.css";
 import Header from "../../components/Header/header";
@@ -27,18 +26,6 @@ class Login extends Component {
     }
   }
 
-  // static getDerivedStateFromProps(nextProps) {
-  //   if(nextProps.auth.isAuthenticated) {
-  //     this.props.history.push("/profile");
-  //   }
-
-  //   if (nextProps.errors) {
-  //     this.setState({
-  //       errors: nextProps.errors
-  //     });
-  //   }
-  // }
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticaed) {
       this.props.history.push("/profile");
@@ -51,38 +38,6 @@ class Login extends Component {
     }
   }
 
-  // componentDidUpdate(nextProps) {
-  //   if(nextProps.auth.isAuthenticated) {
-  //     console.log("working");
-  //     this.props.history.push("/profile");
-  //   }
-
-  //   if (nextProps.errors) {
-  //     this.setState({
-  //       errors: nextProps.errors
-  //     });
-  //   }
-  // }
-
-  // static getDerivedStateFromProps(nextProps) {
-  //   if (nextProps.auth.isAuthenticaed) {
-  //     console.log("working");
-  //     const history = "/profile";
-  //     // this.props.history.push("/profile");
-  //     return history;
-  //   }
-
-  //   if (nextProps.errors) {
-  //     // this.setState({
-  //     //   errors: nextProps.errors
-  //     // });
-  //     const { errors } = nextProps.errors;
-  //     return errors;
-  //   }
-
-  //   return nextProps;
-  // }
-
   onChange = event => {
     this.setState({ [event.target.id]: event.target.value });
   };
@@ -94,8 +49,6 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     };
-
-    // console.log(userData);
 
     this.props.loginUser(userData, this.props.history);
   };
@@ -188,9 +141,8 @@ class Login extends Component {
                       right: "67%",
                       top: "50px"
                     }}
-                    onSubmit={this.onSubmit}
+                    
                     type="submit"
-                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                   >
                     Login
                   </button>

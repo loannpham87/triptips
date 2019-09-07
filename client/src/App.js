@@ -13,7 +13,7 @@ import Home from "./pages/Home/home";
 import Login from "./pages/Login/login.js";
 import Signup from "./pages/Signup/signup";
 import Profile from "./pages/Profile/profile";
-import Post from "./pages/Post/post";
+import Upload from "./pages/Upload/upload";
 
 import "./App.css";
 
@@ -36,18 +36,8 @@ if (localStorage.jwtToken) {
     window.location.href = "./login";
   }
 }
-// const client = new ApolloClient({
-//   uri: "http://localhost:4000/graphql"
-// });
+
 class App extends Component {
-  // constructor() {
-  //   super();
-  //   // connect to pusher
-  //   this.pusher = new Pusher("PUSHER_APP_KEY", {
-  //     cluster: "eu",
-  //     encrypted: true
-  //   });
-  // }
   render() {
     return (
       <Provider store={store}>
@@ -60,7 +50,7 @@ class App extends Component {
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
                 <Route exact path="/profile" component={Profile} />
-                <Route exact Post="/post" component={Post} />
+                <Route exact Post="/upload" component={Upload} />
               </Switch>
           </div>
         </Router>

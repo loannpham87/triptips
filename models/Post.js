@@ -1,34 +1,39 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const postSchema = new Schema({
+//Create Schema
+const PostSchema = new Schema({
+    userId: {
+        type: String,
+        required: true
+    },
     title: {
         type: String,
         required: true
     },
+    userName: {
+        type: String,
+        required: true
+    },
+    picUrl: {
+        type: String,
+        required: true
+    },
     caption: {
-        type: String,
-        required: true
+        type: String
     },
-    imageUrl: {
-        type: String,
-        required: true
-    },
-    image_id: {
-        type: String,
-        required: true
-    },
-    profilePic: {
-        type: String,
-        default: 'https://www.vccircle.com/wp-content/uploads/2017/03/default-profile.png' 
-    },
-    userId: Schema.Types.ObjectId,
-    followers: [Schema.Types.ObjectId],
-	following: [Schema.Types.ObjectId],
     date: {
         type: Date,
         default: Date.now
+    },
+    upvote: {
+        type: Number,
+        default: 0
+    },
+    downvote: {
+        type: Number,
+        default: 0
     }
-})
+});
 
-mongoose.model('Post', postSchema);
+module.exports = Post = mongoose.model("post", PostSchema);

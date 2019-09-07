@@ -38,8 +38,13 @@ class Profile extends Component {
     // this.props.logoutUser();
 
     this.props.logoutUser(this.props.history);
+    // this.props.logoutUser();
     console.log("logged out");
 
+  }
+
+  onUploadClick = event => {
+    this.props.history.push("/upload");
   }
 
   render() {
@@ -55,19 +60,26 @@ class Profile extends Component {
           {/* <div>
                 <h1>{user.name}</h1>
               </div> */}
+          {/* <h1>{user.name}</h1> */}
 
           <button
+            className="btn"
             onClick={this.onLogoutClick}
+            style={{width:"200px",
+            height: "50px",
+            marginRight: "200px",
+            padding: "15px"}}
           >Logout</button>
+          {/* <button onClick={this.onUploadClick}>Upload</button> */}
 
-          <Link to="/upload" className="btn-flat waves-effect">
+          <Link to="/upload" className="btn waves-effect s12" style={{width: "200px", height:"50px", padding: "15px"}}>
             Upload
             </Link>
           {this.state.uploads.map(function (pic, i) {
             return (
               <div key={pic.id} id={pic.userId} className="card" style={{margin: "25px", width: "700px", height: "100%" }}>
                 <h2 className="title" style={{ fontSize: "50px" }}>{pic.title}</h2>
-                <img src={pic.picUrl} style={{ width: "500px", height: "400px", paddingLeft: "125px" }} alt="user photo" />
+                <img src={pic.picUrl} style={{ width: "600px", height: "400px", paddingLeft: "115px" }} alt="user photo" />
                 <p className="caption" style={{ margin: "50px" }}>{pic.caption}</p>
               </div>
             )

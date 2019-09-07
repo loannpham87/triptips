@@ -39,10 +39,19 @@ const port = process.env.PORT || 5000;
 
 if(process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
+    app.use(helmet.contentSecurityPolicy({
+        directives: {
+            defaultSrc : ["'self'"],
+            styleSrc: ["'self'"],
+            imgSrc: []
+        }
+    }))
+
+    app.get("*", (req, res) => {
+        resonse.sendFile(path.join(__dirname, "client/build", "index.html"));
+    });
 }
 
-app.get("*", (req, res) => {
-    resonse.sendFile(path.join(__dirname, "client/build", "index.html"));
-});
+
 
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));

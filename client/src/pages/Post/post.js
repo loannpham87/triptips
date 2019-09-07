@@ -5,7 +5,7 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 // import Notifier from "../Notifier/notifier";
 import { Container, Item, Image, Button, Header, Grid, Card } from 'semantic-ui-react';
-import * as photoActions from '../../actions/photo';
+import * as photoActions from '../../actions/postAction';
 import * as userActions from '..//..//actions/users';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';

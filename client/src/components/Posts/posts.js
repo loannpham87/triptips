@@ -4,7 +4,7 @@ import "./posts.css";
 // import Post from "../Post/post";
 // import Notifier from "../Notifier/notifier";
 import { Grid, Segment, Card, Image, List } from 'semantic-ui-react';
-import * as photoActions from '../../actions/photo';
+import * as photoActions from '../../actions/postAction';
 import * as userActions from '..//..//actions/users';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';

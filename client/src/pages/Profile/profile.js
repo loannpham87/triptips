@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import  { logoutUser } from "./../../actions/authActions";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./profile.css";
 import Posts from "../../components/Posts/posts";
 import Navbar from "..//..//components/NavBar/navbar";
@@ -58,6 +58,10 @@ class Profile extends Component {
             <button
               onClick={this.onLogoutClick}
               >Logout</button>
+            
+            <Link to="/upload" className="btn-flat waves-effect">
+              Upload
+            </Link>
           </Container>
           </React.Fragment>
         );

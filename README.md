@@ -152,9 +152,9 @@ npm run dev
 
 <hr><br>
 
-- [React](www.react.com "React") - front end dev
-- [Backend](www.backend.com "Google") - back end dev
-- [Another](www.another.com "Google") - something else
+- [React](https://reactjs.org/ "React") - Component-based JavaScript library for front-end dev
+- [MongoDB](https://www.mongodb.com/ "MongoDB") - back end dev/data storage
+- [Passport](https://www.npmjs.com/package/passport "Google") - user authentication
   <br>
 
 ## Authors
@@ -163,6 +163,6 @@ npm run dev
 
 - [Amanda Johnson](https://github.com/AmandaLuane) - _Backend_ - <p>contributions</p>
 
-- [Loann Pham](https://github.com/loannpham87) - _Front End_ - <p>contributions</p>
+- [Loann Pham](https://github.com/loannpham87) - _Front End_ - <p>Initial setup of React folder structure. Setup of GitHub repo and Kanban board. UI/UX design for all front-end pages. Creating components with React for front-end pages. Heroku deployment. And a sick Readme.</p>
 
-- [Robert Weston](https://github.com/rdweston1995) - _Back End_ - <p>contributions</p>
+- [Robert Weston](https://github.com/rdweston1995) - _Back End_ - <p>Worked on backend with a focus on user login. Using MongoDB, Passport, and Redux to allow the user to sign up/login and remain signed in to the site.</p>

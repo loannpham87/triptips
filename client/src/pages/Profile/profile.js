@@ -1,4 +1,3 @@
-    
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -15,6 +14,23 @@ import {Container} from "semantic-ui-react";
 
 
 class Profile extends Component { 
+  constructor() {
+    super();
+    this.state = {
+
+    }
+  }
+
+  componentDidMount() {
+    console.log(this.props.auth.user);
+
+    axios.get("/api/posts/uploads/" + this.props.auth.user.id)
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(err => console.log(err));
+  }
+
   onLogoutClick  = event => {
     event.preventDefault();
     // this.props.logoutUser();
@@ -42,11 +58,6 @@ class Profile extends Component {
             <button
               onClick={this.onLogoutClick}
               >Logout</button>
-              {/* <Link
-                to="/login"
-                className="btn btn-large waves-effect waves-light hoverable accent-3"
-                onClick={this.onLogoutClick}
-                >Logout</Link> */}
           </Container>
           </React.Fragment>
         );
@@ -66,39 +77,3 @@ export default connect(
     mapStateToProps,
     { logoutUser }
 )(Profile);
-
-
-
-
-
-
-
-// function Profile(props) {
-//   console.log(props);
-//   return (
-//     <React.Fragment>
-//       <div className="App">
-//         <header className="main-header">
-//           <img
-//             src="./../../images/transparent-bkg.png"
-//             className="logo"
-//             alt="logo"
-//           />
-//         </header>
-//         <div>
-//           TEST
-//           {props.location.key}
-//         </div>
-//         {/* <div>
-//           <Post/>
-//         </div> */}
-//       </div>
-
-//       <div>
-//         <Post />
-//       </div>
-//     </React.Fragment>
-//   );
-// }
-
-// export default Profile;

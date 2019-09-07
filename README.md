@@ -1,15 +1,12 @@
 # **TripTips**
 
-<hr>
-<hr>
 <br>
 <p>TripTips is a social media app in which users are the driving force behind the kind of content that is curated. It's main purpose is to allow users to post pictures of their travels, whether it's beaches, museums, great restaurants, or outdoor activites. Other users can then pin those pictures to their own travel boards, populated by country/region. No need to read through endless- sometimes ranting reviews; just look through other users' pictures and decide for yourself what kind of adventure you're going to have!</p>
 
-[Heroku Link](www.heroku.com "TripTips - Heroku")
+[Heroku Link](https://triptips-app.herokuapp.com/ "TripTips - Heroku")
 
 ## Getting Started
 
-<hr>
 <p>To run this on your own system, you will need the following software:</p>
 
 - VSCode or another code compiler

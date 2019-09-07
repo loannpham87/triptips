@@ -14,6 +14,7 @@ import Login from "./pages/Login/login.js";
 import Signup from "./pages/Signup/signup";
 import Profile from "./pages/Profile/profile";
 import Post from "./pages/Post/post";
+import Upload from "./pages/Upload/upload";
 
 import "./App.css";
 

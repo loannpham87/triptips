@@ -1,7 +1,7 @@
 # **TripTips**
 
 <br>
-<p>TripTips is a social media app in which users are the driving force behind the kind of content that is curated. It's main purpose is to allow users to post pictures of their travels, whether it's beaches, museums, great restaurants, or outdoor activites. Other users can then pin those pictures to their own travel boards, populated by country/region. No need to read through endless- sometimes ranting reviews; just look through other users' pictures and decide for yourself what kind of adventure you're going to have!</p>
+<p>TripTips is a social media app in which users are the driving force behind the kind of content that is curated. Its main purpose is to allow users to post pictures of their travels, whether it's beaches, museums, great restaurants, or outdoor activities. Other users can then pin those pictures to their own travel boards, which are populated by country/region. No need to read through endless- sometimes seemingly ranting reviews; just look through other users' pictures and decide for yourself what kind of adventure you're going to have!</p>
 
 [Heroku Link](https://triptips-app.herokuapp.com/ "TripTips - Heroku")
 
@@ -161,7 +161,7 @@ npm run dev
 
 <hr><br>
 
-- [Amanda Johnson](https://github.com/AmandaLuane) - _Backend_ - <p>contributions</p>
+- [Amanda Johnson](https://github.com/AmandaLuane) - _Back End_ - <p>contributions</p>
 
 - [Loann Pham](https://github.com/loannpham87) - _Front End_ - <p>Initial setup of React folder structure. Setup of GitHub repo and Kanban board. UI/UX design for all front-end pages. Creating components with React for front-end pages. Heroku deployment. And a sick Readme.</p>
 

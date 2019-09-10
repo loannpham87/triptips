@@ -11,13 +11,13 @@ package-lock.json
 /node_modules
 
 package-lock.json/
-build/
+
 
 # testing
 /coverage
 
 # production
-build/
+
 
 # misc
 .DS_Store

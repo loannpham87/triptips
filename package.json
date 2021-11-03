@@ -41,7 +41,7 @@
     "semantic-ui-react": "^0.88.0",
     "serve-favicon": "~2.4.2",
     "stream-buffers": "^3.0.1",
-    "validator": "^11.1.0"
+    "validator": "^13.7.0"
   },
   "main": "server.js",
   "scripts": {
